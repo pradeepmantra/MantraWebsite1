@@ -1,0 +1,561 @@
+/* ==========================================================================
+   Modern High-End Visual Design for ElectroShop (2025)
+   Brand Colors: Primary - #0D1C37, Accent - #C02D1D, Background - #f5f7fa
+   Fonts: Poppins (headings), Open Sans (body)
+   Compatible with Bootstrap 5
+   ========================================================================== */
+
+/* 1. GOOGLE FONTS IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap');
+
+/* 2. CSS VARIABLES (Light & Dark Mode) */
+:root {
+    --primary: #011936;
+    --accent: #E43636;
+    --background: #F4FFFD;
+    --surface: #ffffff;
+    --text-main: #011936;
+    --text-muted: #4a6d7a;
+    --border-radius: 1.1rem;
+    --shadow: 0 4px 24px 0 rgba(1, 25, 54, 0.08), 0 1.5px 6px 0 rgba(1, 25, 54, 0.04);
+    --shadow-hover: 0 8px 32px 0 rgba(1, 25, 54, 0.16), 0 3px 12px 0 rgba(1, 25, 54, 0.08);
+    --navbar-bg: #ffffff;
+    --navbar-bg-scrolled: #F4FFFD;
+    --footer-bg: #011936;
+    --footer-text: #F4FFFD;
+    --focus-outline: 2px solid var(--accent);
+    --transition: 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary: #F4FFFD;
+        --accent: #C02D1D;
+        --background: #011936;
+        --surface: #1a2f42;
+        --text-main: #F4FFFD;
+        --text-muted: #9bb5c4;
+        --navbar-bg: #1a2f42;
+        --navbar-bg-scrolled: #011936;
+        --footer-bg: #000d1a;
+        --footer-text: #F4FFFD;
+    }
+}
+
+/* 3. GLOBAL RESET & TYPOGRAPHY */
+html, body {
+  height: 100%;
+  background: var(--background);
+  color: var(--text-main);
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--primary);
+  margin-bottom: 0.7em;
+}
+
+h1 {
+  font-size: 2.8rem;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 2.1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p, .lead {
+  color: var(--text-muted);
+  font-size: 1.08rem;
+  margin-bottom: 1.2em;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+/*a:focus, button:focus, .btn:focus {
+  outline: var(--focus-outline);
+  outline-offset: 2px;
+}*/
+
+/* 4. CONTAINER & SECTION SPACING */
+.container, .container-fluid {
+/*  padding-left: 1.5rem;
+  padding-right: 1.5rem;*/
+}
+
+section, .section {
+  padding: 4.5rem 0 2rem 0;
+}
+
+.section-alt {
+  background: var(--surface);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 2.5rem;
+  padding: 2.5rem 1.5rem;
+}
+
+/* 5. NAVBAR */
+.navbar-custom {
+  background: var(--navbar-bg);
+  box-shadow: 0 2px 12px 0 rgba(21,67,96,0.04);
+  transition: background var(--transition), padding var(--transition), box-shadow var(--transition);
+  padding: 1.1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-custom.scrolled {
+  background: var(--navbar-bg-scrolled);
+  padding: 0.6rem 0;
+  box-shadow: 0 2px 16px 0 rgba(21,67,96,0.10);
+}
+
+.navbar-brand {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--primary) !important;
+  letter-spacing: 0.04em;
+}
+
+.navbar-nav .nav-link {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: var(--primary);
+    margin-left: 1.2rem;
+    position: relative;
+    transition: color var(--transition);
+    padding-bottom: 0.2rem;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  color: var(--accent);
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2.5px;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width var(--transition);
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+/* 6. HERO SECTION */
+.hero-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(120deg, #0D1C37 60%, #f5f7fa 100%);
+    position: relative;
+    color: #fff;
+    text-align: center;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    box-shadow: 0 8px 32px 0 rgba(21,67,96,0.10);
+    overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(21,67,96,0.55);
+  z-index: 1;
+}
+
+.hero-section > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section h1, .hero-section .lead {
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(21,67,96,0.18);
+}
+
+.hero-section .btn {
+  margin: 0 0.5rem;
+}
+    .hero-section .bg-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+
+    .hero-section .overlay {
+        z-index: 1;
+    }
+
+    .hero-section .container {
+        z-index: 2;
+    }
+
+/* 7. BUTTONS */
+.btn, .btn-lg, .btn-primary, .btn-outline-secondary {
+  border-radius: 2.2rem;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.7rem 2.2rem;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px 0 rgba(21,67,96,0.08);
+  border: none;
+  transition: 
+    background var(--transition),
+    color var(--transition),
+    box-shadow var(--transition),
+    transform 0.18s cubic-bezier(.4,0,.2,1);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+        background: var(--primary) !important;
+        box-shadow: 0 6px 24px 0 rgba(244,208,63,0.18);
+        transform: translateY(-2px) scale(1.04);
+    }
+
+.btn-light:hover, .btn-light:focus, .btn-light:active {
+    box-shadow: 0 6px 24px 0 rgba(244,208,63,0.18);
+    transform: translateY(-2px) scale(1.04);
+}
+    .btn-outline-secondary {
+        background: transparent;
+        color: var(--primary);
+        border: 2px solid var(--primary);
+    }
+
+.btn-outline-secondary:hover, .btn-outline-secondary:focus {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  box-shadow: 0 6px 24px 0 rgba(21,67,96,0.12);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* 8. PRODUCT CATALOG CARDS */
+.product-card {
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  background: var(--surface);
+  border: none;
+  transition: 
+    box-shadow var(--transition),
+    transform var(--transition),
+    border-color var(--transition);
+  margin-bottom: 2.2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-card img {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  background: #eaeaea;
+}
+
+.product-card .card-body {
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+}
+
+.product-card .card-title {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.product-card .card-text {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.product-card .btn {
+  margin-top: 0.7rem;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+}
+
+.product-card:hover, .product-card:focus-within {
+  box-shadow: 0 8px 32px 0 rgba(244,208,63,0.18), 0 3px 12px 0 rgba(21,67,96,0.12);
+  transform: translateY(-6px) scale(1.025);
+  border-color: var(--accent);
+  z-index: 2;
+}
+
+.product-card:focus-within {
+  outline: var(--focus-outline);
+}
+
+/* Responsive grid for catalog */
+@media (max-width: 767.98px) {
+  .product-card img { height: 170px; }
+}
+@media (max-width: 575.98px) {
+  .product-card img { height: 140px; }
+}
+
+/* 9. SECTION DIVIDERS & ALTERNATING BACKGROUNDS */
+.section-divider {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+  border-radius: 2px;
+  margin: 2.5rem 0;
+  opacity: 0.12;
+}
+
+.section-alt {
+  background: var(--surface);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+/* 10. CONTACT & ABOUT SECTIONS */
+.about-section, .contact-info {
+  background: var(--surface);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 2.5rem 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.map-container {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin: 2rem 0;
+  min-height: 320px;
+}
+
+/* 11. FOOTER */
+.footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 2.5rem 0 1.2rem 0;
+  margin-top: 3rem;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  box-shadow: 0 -2px 16px 0 rgba(21,67,96,0.10);
+  font-size: 1.05rem;
+}
+
+.footer a {
+  color: var(--accent);
+  margin: 0 0.5rem;
+  transition: color var(--transition), text-shadow var(--transition);
+}
+
+.footer a:hover, .footer a:focus {
+  color: #fff;
+  text-shadow: 0 0 8px var(--accent);
+}
+
+.footer .social-icons {
+  margin-top: 1rem;
+}
+
+.footer .social-icons a {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin: 0 0.4rem;
+  color: var(--accent);
+  transition: color var(--transition), box-shadow var(--transition);
+}
+
+.footer .social-icons a:hover, .footer .social-icons a:focus {
+  color: #fff;
+  box-shadow: 0 0 12px 0 var(--accent);
+}
+
+/* 12. SCROLL ANIMATIONS (AOS-compatible) */
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: 0.7s;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: none;
+}
+
+[data-aos="fade-up"] {
+  transform: translateY(40px);
+}
+
+[data-aos="fade-down"] {
+  transform: translateY(-40px);
+}
+
+[data-aos="fade-left"] {
+  transform: translateX(-40px);
+}
+
+[data-aos="fade-right"] {
+  transform: translateX(40px);
+}
+
+[data-aos="zoom-in"] {
+  transform: scale(0.95);
+}
+
+[data-aos="zoom-out"] {
+  transform: scale(1.05);
+}
+
+/* 13. ACCESSIBILITY & FOCUS */
+:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: 2px;
+}
+
+img, .card-img-top {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-link {
+    margin-left: 0.7rem;
+  }
+}
+
+/* 14. CUSTOM UTILITIES */
+.bg-primary-gradient {
+  background: linear-gradient(120deg, var(--primary) 60%, var(--accent) 100%);
+  color: #fff;
+}
+
+.rounded-xl {
+  border-radius: var(--border-radius) !important;
+}
+
+.shadow-lg-custom {
+  box-shadow: var(--shadow-hover) !important;
+}
+
+/* 15. DARK MODE TOGGLE (OPTIONAL) */
+body.dark-mode {
+  background: #1a2636;
+  color: #f5f7fa;
+}
+
+body.dark-mode .navbar-custom {
+  background: #22304a;
+}
+
+    body.dark-mode .footer {
+        background: #0D1C37;
+        color: #f5f7fa;
+    }
+
+/* 16. SMOOTH SCROLLING */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 17. MISC */
+::-webkit-scrollbar {
+  width: 10px;
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 6px;
+}
+
+/* 18. BOOTSTRAP OVERRIDES FOR FORMS, INPUTS, ETC. */
+input, textarea, select, .form-control {
+  border-radius: 0.7rem;
+  border: 1.5px solid #e0e6ed;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+input:focus, textarea:focus, select:focus, .form-control:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(244,208,63,0.18);
+}
+
+/* 19. HIGH-VISIBILITY FOCUS FOR BUTTONS & LINKS */
+.btn:focus-visible, a:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: 2px;
+}
+
+/* 20. RESPONSIVE PRODUCT GRID (Bootstrap override) */
+/*@media (max-width: 767.98px) {
+  .row > [class*='col-'] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .row > [class*='col-'] {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .row > [class*='col-'] {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+@media (min-width: 992px) {
+    .contact-section .col-md-6 {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+}*/
+
+/* ==========================================================================
+   END OF FILE
+   ========================================================================== */

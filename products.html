@@ -1,0 +1,307 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Our Products – ElectroShop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/product.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fa-solid fa-bolt" style="color:var(--accent);"></i> ElectroShop
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+        </ul>
+        <button id="darkModeToggle" class="btn btn-outline-secondary ms-3" aria-label="Toggle dark mode">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="breadcrumb" class="bg-transparent py-3">
+    <div class="container">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Products</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Page Title -->
+  <div class="container mb-4">
+    <h1 class="text-center mb-4" data-aos="fade-down">Our Products</h1>
+  </div>
+
+  <!-- Product Grid -->
+  <div class="container pb-5">
+    <div class="row g-4">
+      <!-- Product 1 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up">
+          <div class="card product-card h-100">
+              <img src="assets/Images/Products/Smart LED Bulb.jpg" class="card-img-top" alt="Smart LED Bulb" />
+              <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Smart LED Bulb</h5>
+                  <p class="card-text">Energy-efficient, app-controlled lighting for every room.</p>
+                  <div class="mb-2 text-primary fw-bold">₹499</div>
+                  <div class="mb-3 text-warning">
+                      <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa-regular fa-star"></i>
+                  </div>
+                  <div class="mt-auto d-flex gap-2">
+                      <a href="./Products/product-details-smart-led-bulb.html" class="btn btn-primary btn-sm flex-fill">View Details</a>
+                      <button class="btn btn-outline-secondary btn-sm flex-fill">Add to Cart</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- Product 2 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in">
+        <div class="card product-card h-100">
+          <img src="assets/Images/Products/WiFi Smart Switch.jpg" class="card-img-top" alt="WiFi Smart Switch" />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">WiFi Smart Switch</h5>
+            <p class="card-text">Control your devices from anywhere with voice or app.</p>
+            <div class="mb-2 text-primary fw-bold">₹899</div>
+            <div class="mb-3 text-warning">
+              <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-alt"></i> <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="mt-auto d-flex gap-2">
+              <a href="./Products/product-details-wifi-smart-switch.html" class="btn btn-primary btn-sm flex-fill">View Details</a>
+              <button class="btn btn-outline-secondary btn-sm flex-fill">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product 3 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up">
+        <div class="card product-card h-100">
+            <img src="assets/Images/Products/Surge Protector.jpg" class="card-img-top" alt="Surge Protector"/>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Surge Protector</h5>
+            <p class="card-text">Protect your electronics with advanced surge protection.</p>
+            <div class="mb-2 text-primary fw-bold">₹699</div>
+            <div class="mb-3 text-warning">
+              <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-alt"></i>
+            </div>
+            <div class="mt-auto d-flex gap-2">
+              <a href="./Products/product-details-surge-protector.html" class="btn btn-primary btn-sm flex-fill">View Details</a>
+              <button class="btn btn-outline-secondary btn-sm flex-fill">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product 4 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in">
+        <div class="card product-card h-100">
+            <img src="assets/Images/Products/Extension Cord.jpg" class="card-img-top" alt="Extension Cord" />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Extension Cord</h5>
+            <p class="card-text">Heavy-duty, 3-meter extension for all your needs.</p>
+            <div class="mb-2 text-primary fw-bold">₹299</div>
+            <div class="mb-3 text-warning">
+              <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa-regular fa-star"></i> <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="mt-auto d-flex gap-2">
+              <a href="./Products/product-details-extension-cord.html" class="btn btn-primary btn-sm flex-fill">View Details</a>
+              <button class="btn btn-outline-secondary btn-sm flex-fill">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product 5 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up">
+        <div class="card product-card h-100">
+          <img src="assets/Images/Products/Motion Sensor Light.jpg" class="card-img-top" alt="Motion Sensor Light"/>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Motion Sensor Light</h5>
+            <p class="card-text">Automatic lighting for safety and convenience.</p>
+            <div class="mb-2 text-primary fw-bold">₹599</div>
+            <div class="mb-3 text-warning">
+              <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-alt"></i> <i class="fa-regular fa-star"></i> <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="mt-auto d-flex gap-2">
+              <a href="./Products/product-details-motion-sensor-light.html" class="btn btn-primary btn-sm flex-fill">View Details</a>
+              <button class="btn btn-outline-secondary btn-sm flex-fill">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product 6 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in">
+        <div class="card product-card h-100">
+          <img src="assets/Images/Products/USB Wall Socket.jpg" class="card-img-top" alt="USB Wall Socket" />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">USB Wall Socket</h5>
+            <p class="card-text">Charge devices directly with built-in USB ports.</p>
+            <div class="mb-2 text-primary fw-bold">₹349</div>
+            <div class="mb-3 text-warning">
+              <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="mt-auto d-flex gap-2">
+              <a href="product-details.html" class="btn btn-primary btn-sm flex-fill">View Details</a>
+              <button class="btn btn-outline-secondary btn-sm flex-fill">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product 7 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up">
+        <div class="card product-card h-100">
+            <img src="assets/Images/Products/RGB LED Strip.jpg" class="card-img-top" alt="RGB LED Strip"/>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">RGB LED Strip</h5>
+            <p class="card-text">Colorful, flexible lighting for creative spaces.</p>
+            <div class="mb-2 text-primary fw-bold">₹799</div>
+            <div class="mb-3 text-warning">
+              <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-alt"></i> <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="mt-auto d-flex gap-2">
+              <a href="product-details.html" class="btn btn-primary btn-sm flex-fill">View Details</a>
+              <button class="btn btn-outline-secondary btn-sm flex-fill">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product 8 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in">
+        <div class="card product-card h-100">
+          <img src="assets/Images/Products/Digital Circuit Tester.jpg" class="card-img-top" alt="Digital Circuit Tester" />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Digital Circuit Tester</h5>
+            <p class="card-text">Professional-grade voltage tester with LCD display.</p>
+            <div class="mb-2 text-primary fw-bold">₹999</div>
+            <div class="mb-3 text-warning">
+              <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-alt"></i>
+            </div>
+            <div class="mt-auto d-flex gap-2">
+              <a href="product-details.html" class="btn btn-primary btn-sm flex-fill">View Details</a>
+              <button class="btn btn-outline-secondary btn-sm flex-fill">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product 9 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="fade-up">
+        <div class="card product-card h-100">
+          <img src="assets/Images/Products/Smart Thermostat.jpg" class="card-img-top" alt="Smart Thermostat" />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Smart Thermostat</h5>
+            <p class="card-text">WiFi-enabled programmable thermostat with energy saving features.</p>
+            <div class="mb-2 text-primary fw-bold">₹1,499</div>
+            <div class="mb-3 text-warning">
+              <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="mt-auto d-flex gap-2">
+              <a href="product-details.html" class="btn btn-primary btn-sm flex-fill">View Details</a>
+              <button class="btn btn-outline-secondary btn-sm flex-fill">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product 10 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in">
+        <div class="card product-card h-100">
+          <img src="assets/Images/Products/Wireless Security Camera.jpeg" class="card-img-top" alt="Wireless Security Camera" />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Wireless Security Camera</h5>
+            <p class="card-text">1080p HD security camera with night vision and two-way audio.</p>
+            <div class="mb-2 text-primary fw-bold">₹2,499</div>
+            <div class="mb-3 text-warning">
+              <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-alt"></i>
+            </div>
+            <div class="mt-auto d-flex gap-2">
+              <a href="product-details.html" class="btn btn-primary btn-sm flex-fill">View Details</a>
+              <button class="btn btn-outline-secondary btn-sm flex-fill">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer text-center mt-5">
+    <div class="container">
+      <div class="row mb-3">
+        <div class="col-md-6 text-md-start mb-3 mb-md-0">
+          <a class="navbar-brand" href="index.html">
+            <i class="fa-solid fa-bolt" style="color:var(--accent);"></i> ElectroShop
+          </a>
+          <div class="mt-2 small">Your trusted electrical partner since 2000.</div>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="section-divider"></div>
+      <div class="small">&copy; 2024 ElectroShop. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button type="button" class="btn btn-primary rounded-circle shadow-lg position-fixed" id="scrollTopBtn" style="bottom:2rem;right:2rem;display:none;z-index:999;" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // AOS init
+    AOS.init({ once: true, duration: 700 });
+
+    // Dark mode toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    darkModeToggle.addEventListener('click', function() {
+      document.body.classList.toggle('dark-mode');
+    });
+
+    // Scroll to top button
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) {
+        scrollTopBtn.style.display = 'block';
+      } else {
+        scrollTopBtn.style.display = 'none';
+      }
+    });
+    scrollTopBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Navbar shrink on scroll
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar-custom');
+      if (window.scrollY > 60) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>

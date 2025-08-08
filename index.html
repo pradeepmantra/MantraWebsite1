@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ElectroShop – Modern Electrical Retail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/product.css" rel="stylesheet">
+    <link href="css/testimonial.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <link href="css/brands.css" rel="stylesheet">
+    <link href="css/CTAbanner.css" rel="stylesheet">
+    <link href="css/whychooseus.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar - Keeping existing implementation -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fa-solid fa-bolt" style="color:var(--accent);"></i> ElectroShop
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+                    </li>
+                </ul>
+                <button id="darkModeToggle" class="btn btn-outline-secondary ms-3" aria-label="Toggle dark mode">
+                    <i class="fa-regular fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Keeping existing implementation -->
+    <section class="hero-section position-relative d-flex align-items-center justify-content-center text-white" data-aos="fade-up" style="min-height: 100vh; overflow: hidden;">
+
+        <!-- Video Background -->
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="assets/Videos/1531069-uhd_3840_2160_30fps.mp4" type="video/mp4">
+            <!--<source src="assets/Videos/856319-hd_1920_1080_30fps.mp4" type="video/mp4">-->
+            Your browser does not support HTML5 video.
+        </video>
+
+        <!-- Overlay Content -->
+        <div class="container position-relative text-center z-1">
+            <h1 class="display-4 mb-4">Powering Your World with Quality Electrical Solutions</h1>
+            <p class="lead mb-4">
+                Shop the latest in smart home, lighting, and electrical essentials – trusted by
+                professionals and homeowners alike.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a href="products.html" class="btn btn-primary btn-lg">Shop Now</a>
+                <a href="about.html" class="btn btn-light btn-lg">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Optional: dark overlay -->
+        <!--<div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 z-0"></div>-->
+    </section>
+
+
+    <!-- Featured Products Section -->
+    <section class="featured-products py-5" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-center mb-5">Featured Products</h2>
+            <div class="row g-4">
+                <!-- Featured Product 1 -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card product-card h-100">
+                        <img src="assets/Images/Products/Smart LED Bulb.jpg" class="card-img-top" alt="Smart LED Bulb" />
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Smart LED Bulb</h5>
+                            <p class="card-text">Energy-efficient smart lighting for modern homes</p>
+                            <div class="mt-auto">
+                                <span class="text-primary fw-bold">₹499</span>
+                                <a href="products.html" class="btn btn-outline-primary btn-sm float-end">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Featured Product 2 -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card product-card h-100">
+                        <img src="assets/Images/Products/WiFi Smart Switch.jpg" class="card-img-top" alt="WiFi Smart Switch" />
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">WiFi Smart Switch</h5>
+                            <p class="card-text">Control your devices from anywhere</p>
+                            <div class="mt-auto">
+                                <span class="text-primary fw-bold">₹899</span>
+                                <a href="products.html" class="btn btn-outline-primary btn-sm float-end">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Featured Product 3 -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card product-card h-100">
+                        <img src="assets/Images/Products/Motion Sensor Light.jpg" class="card-img-top" alt="Motion Sensor Light" />
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Motion Sensor</h5>
+                            <p class="card-text">Automated lighting for security</p>
+                            <div class="mt-auto">
+                                <span class="text-primary fw-bold">₹599</span>
+                                <a href="products.html" class="btn btn-outline-primary btn-sm float-end">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Why Choose Us Section -->
+    <section class="why-choose-section" data-aos="fade-up">
+        <div class="why-choose-container">
+            <!-- Header -->
+            <div class="section-header">
+                <div class="section-badge">
+                    <span>Why ElectroShop</span>
+                </div>
+                <h2 class="section-title">
+                    Setting the Standard in
+                    <span class="highlight-text">Electronics Excellence</span>
+                </h2>
+                <p class="section-description">
+                    Experience the difference with our commitment to quality, innovation, and customer satisfaction
+                </p>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card-inner">
+                        <div class="feature-front">
+                            <div class="feature-icon">
+                                <div class="icon-bg"></div>
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M9 12l2 2 4-4" />
+                                    <path d="M12 3a9 9 0 1 1 0 18 9 9 0 0 1 0-18z" />
+                                    <circle cx="12" cy="12" r="1" />
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Premium Quality</h3>
+                            <p class="feature-description">
+                                Rigorously tested and certified products with industry-leading quality standards
+                            </p>
+                            <div class="feature-stats">
+                                <div class="stat">
+                                    <span class="stat-number">99.8%</span>
+                                    <span class="stat-label">Quality Rate</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-back">
+                            <div class="feature-details">
+                                <h4>Our Quality Promise</h4>
+                                <ul>
+                                    <li>ISO 9001 certified processes</li>
+                                    <li>Multi-stage quality testing</li>
+                                    <li>Premium brand partnerships</li>
+                                    <li>Extended warranty coverage</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card-inner">
+                        <div class="feature-front">
+                            <div class="feature-icon">
+                                <div class="icon-bg"></div>
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M16 3h5v5" />
+                                    <path d="m21 3-7 7" />
+                                    <path d="M8 3H3v5" />
+                                    <path d="m3 3 7 7" />
+                                    <path d="M16 21h5v-5" />
+                                    <path d="m21 21-7-7" />
+                                    <path d="M8 21H3v-5" />
+                                    <path d="m3 21 7-7" />
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Lightning Fast</h3>
+                            <p class="feature-description">
+                                Same-day dispatch with express delivery options across all major cities
+                            </p>
+                            <div class="feature-stats">
+                                <div class="stat">
+                                    <span class="stat-number">24h</span>
+                                    <span class="stat-label">Avg Delivery</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-back">
+                            <div class="feature-details">
+                                <h4>Delivery Excellence</h4>
+                                <ul>
+                                    <li>Same-day dispatch facility</li>
+                                    <li>Real-time order tracking</li>
+                                    <li>Secure packaging standards</li>
+                                    <li>Free delivery over $50</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card-inner">
+                        <div class="feature-front">
+                            <div class="feature-icon">
+                                <div class="icon-bg"></div>
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 6V2H8" />
+                                    <path d="m8 18-4 4V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2Z" />
+                                    <path d="M2 12h2" />
+                                    <path d="M9 11v2" />
+                                    <path d="M15 11v2" />
+                                    <path d="M20 12h2" />
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Expert Support</h3>
+                            <p class="feature-description">
+                                Professional technical support and installation guidance from certified experts
+                            </p>
+                            <div class="feature-stats">
+                                <div class="stat">
+                                    <span class="stat-number">24/7</span>
+                                    <span class="stat-label">Support</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-back">
+                            <div class="feature-details">
+                                <h4>Support Services</h4>
+                                <ul>
+                                    <li>24/7 technical helpdesk</li>
+                                    <li>On-site installation service</li>
+                                    <li>Video consultation calls</li>
+                                    <li>Comprehensive user guides</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card-inner">
+                        <div class="feature-front">
+                            <div class="feature-icon">
+                                <div class="icon-bg"></div>
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 2v6.5" />
+                                    <path d="M12 15.5V22" />
+                                    <circle cx="12" cy="12" r="3" />
+                                    <path d="M8 12H2" />
+                                    <path d="M22 12h-6" />
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Smart Solutions</h3>
+                            <p class="feature-description">
+                                Cutting-edge smart home integration and IoT-enabled electronics
+                            </p>
+                            <div class="feature-stats">
+                                <div class="stat">
+                                    <span class="stat-number">500+</span>
+                                    <span class="stat-label">Smart Products</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-back">
+                            <div class="feature-details">
+                                <h4>Innovation Focus</h4>
+                                <ul>
+                                    <li>Latest smart home tech</li>
+                                    <li>IoT device compatibility</li>
+                                    <li>Future-proof solutions</li>
+                                    <li>Regular firmware updates</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-card-inner">
+                        <div class="feature-front">
+                            <div class="feature-icon">
+                                <div class="icon-bg"></div>
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 6v6l4 2" />
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Lifetime Value</h3>
+                            <p class="feature-description">
+                                Extended warranties, trade-in programs, and ongoing maintenance support
+                            </p>
+                            <div class="feature-stats">
+                                <div class="stat">
+                                    <span class="stat-number">3yr+</span>
+                                    <span class="stat-label">Warranty</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-back">
+                            <div class="feature-details">
+                                <h4>Long-term Partnership</h4>
+                                <ul>
+                                    <li>Extended warranty options</li>
+                                    <li>Device trade-in programs</li>
+                                    <li>Regular maintenance checks</li>
+                                    <li>Upgrade advisory service</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-card-inner">
+                        <div class="feature-front">
+                            <div class="feature-icon">
+                                <div class="icon-bg"></div>
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                    <path d="M2 12h1m9-9v1M1 12v1m9 9v-1m9-9h-1M4.2 7.8l.7.7m12.1-.7-.7.7m0 8.4.7-.7m-12.1.7.7-.7" />
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Eco-Friendly</h3>
+                            <p class="feature-description">
+                                Sustainable practices with energy-efficient products and recycling programs
+                            </p>
+                            <div class="feature-stats">
+                                <div class="stat">
+                                    <span class="stat-number">Carbon</span>
+                                    <span class="stat-label">Neutral</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-back">
+                            <div class="feature-details">
+                                <h4>Sustainability Commitment</h4>
+                                <ul>
+                                    <li>Energy Star certified products</li>
+                                    <li>Electronics recycling program</li>
+                                    <li>Carbon-neutral shipping</li>
+                                    <li>Eco-friendly packaging</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="section-cta" data-aos="fade-up" data-aos-delay="700">
+                <p>Ready to experience the ElectroShop difference?</p>
+                <a href="products.html" class="cta-link">
+                    <span>Explore Our Products</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m9 18 6-6-6-6" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="testimonials-container">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card active">
+                        <div class="quote-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-10zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
+                            </svg>
+                        </div>
+                        <p class="testimonial-text">"Excellent products and amazing customer service. The attention to detail and quality exceeded all my expectations. Highly recommended!"</p>
+                        <div class="customer-info">
+                            <div class="avatar">
+                                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="John Doe">
+                            </div>
+                            <div class="customer-details">
+                                <h4 class="customer-name">John Doe</h4>
+                                <p class="customer-role">Homeowner</p>
+                                <div class="rating">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="quote-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-10zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
+                            </svg>
+                        </div>
+                        <p class="testimonial-text">"The smart home products have transformed my daily routine. Innovative technology with seamless integration and incredible reliability."</p>
+                        <div class="customer-info">
+                            <div class="avatar">
+                                <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Jane Smith">
+                            </div>
+                            <div class="customer-details">
+                                <h4 class="customer-name">Jane Smith</h4>
+                                <p class="customer-role">Tech Enthusiast</p>
+                                <div class="rating">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="quote-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-10zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
+                            </svg>
+                        </div>
+                        <p class="testimonial-text">"Outstanding build quality and modern design. The team's expertise and commitment to excellence is truly impressive."</p>
+                        <div class="customer-info">
+                            <div class="avatar">
+                                <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Mike Johnson">
+                            </div>
+                            <div class="customer-details">
+                                <h4 class="customer-name">Mike Johnson</h4>
+                                <p class="customer-role">Interior Designer</p>
+                                <div class="rating">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navigation">
+                    <button class="nav-btn prev" id="prevBtn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                        </svg>
+                    </button>
+                    <div class="dots-indicator">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                    </div>
+                    <button class="nav-btn next" id="nextBtn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        class TestimonialCarousel {
+            constructor() {
+                this.currentSlide = 0;
+                this.totalSlides = 3;
+                this.track = document.getElementById('testimonialTrack');
+                this.cards = document.querySelectorAll('.testimonial-card');
+                this.dots = document.querySelectorAll('.dot');
+                this.prevBtn = document.getElementById('prevBtn');
+                this.nextBtn = document.getElementById('nextBtn');
+
+                this.init();
+            }
+
+            init() {
+                this.prevBtn.addEventListener('click', () => this.prevSlide());
+                this.nextBtn.addEventListener('click', () => this.nextSlide());
+
+                this.dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => this.goToSlide(index));
+                });
+
+                // Auto-play functionality
+                this.startAutoPlay();
+            }
+
+            nextSlide() {
+                this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+                this.updateCarousel();
+            }
+
+            prevSlide() {
+                this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+                this.updateCarousel();
+            }
+
+            goToSlide(index) {
+                this.currentSlide = index;
+                this.updateCarousel();
+            }
+
+            updateCarousel() {
+                const translateX = -this.currentSlide * 100;
+                this.track.style.transform = `translateX(${translateX}%)`;
+
+                // Update active states
+                this.cards.forEach((card, index) => {
+                    card.classList.toggle('active', index === this.currentSlide);
+                });
+
+                this.dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === this.currentSlide);
+                });
+            }
+
+            startAutoPlay() {
+                setInterval(() => {
+                    this.nextSlide();
+                }, 5000); // Auto-advance every 5 seconds
+            }
+        }
+
+        // Initialize carousel when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new TestimonialCarousel();
+        });
+    </script>
+
+    <!-- Call-to-Action Banner - Keeping existing implementation -->
+    <section class="bg-primary-gradient py-5" data-aos="zoom-in">
+        <div class="container text-center">
+            <h2 class="mb-3 text-white">Ready to upgrade your home or business?</h2>
+            <p class="lead mb-4 text-white-50">Discover exclusive deals and expert advice at ElectroShop.</p>
+            <a href="products.html" class="cta-link">
+                <span>Explore Our Products</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="m9 18 6-6-6-6" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Enhanced Partners Section -->
+    <section class="partners-section" data-aos="fade-up">
+        <div class="container">
+            <div class="partners-header">
+                <h2 class="partners-title">Trusted by Leading Brands</h2>
+                <p class="partners-subtitle">Partnering with industry leaders to deliver excellence</p>
+            </div>
+            <div class="brands-container">
+                <div class="brands-grid">
+                    <div class="brand-item">
+                        <div class="brand-logo">
+                            <img src="assets/Images/Brands/anchor.png" alt="Anchor" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="brand-item">
+                        <div class="brand-logo">
+                            <img src="assets/Images/Brands/c&s.png" alt="C&S Electric" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="brand-item">
+                        <div class="brand-logo">
+                            <img src="assets/Images/Brands/havells.png" alt="Havells" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="brand-item">
+                        <div class="brand-logo">
+                            <img src="assets/Images/Brands/philips.png" alt="Philips" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="brand-item">
+                        <div class="brand-logo">
+                            <img src="assets/Images/Brands/polycab.png" alt="Polycab" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="brand-item">
+                        <div class="brand-logo">
+                            <img src="assets/Images/Brands/crompton.png" alt="crompton" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="brand-item">
+                        <div class="brand-logo">
+                            <img src="assets/Images/Brands/meco.png" alt="meco" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="brand-item">
+                        <div class="brand-logo">
+                            <img src="assets/Images/Brands/almonard.png" alt="almonard" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo">
+                            <img src="assets/Images/Brands/L&T.png" alt="l&t" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo">
+                            <img src="assets/Images/Brands/siemens.png" alt="seimens" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="partners-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="50">0</span>
+                    <span class="stat-symbol">+</span>
+                    <span class="stat-label">Global Partners</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="15">0</span>
+                    <span class="stat-symbol">+</span>
+                    <span class="stat-label">Years of Excellence</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="99">0</span>
+                    <span class="stat-symbol">%</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            // Animated Counter Function
+            function animateCounter(element, target, duration = 2000) {
+                const start = 0;
+                const increment = target / (duration / 16);
+                let current = start;
+
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        element.textContent = target;
+                        element.classList.remove('counting');
+                        element.parentElement.classList.add('active');
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.floor(current);
+                    }
+                }, 16);
+            }
+
+            // Initialize counters when section comes into view
+            const observerOptions = {
+                threshold: 0.5,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const statNumbers = entry.target.querySelectorAll('.stat-number');
+                        statNumbers.forEach(stat => {
+                            if (!stat.classList.contains('counted')) {
+                                stat.classList.add('counting', 'counted');
+                                const target = parseInt(stat.dataset.target);
+                                animateCounter(stat, target);
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            // Start observing the stats section
+            document.addEventListener('DOMContentLoaded', () => {
+                const statsSection = document.querySelector('.partners-stats');
+                if (statsSection) {
+                    observer.observe(statsSection);
+                }
+            });
+        </script>
+    </section>
+
+    <!-- Professional Modern Footer -->
+    <footer class="modern-footer">
+        <div class="footer-wrapper">
+            <!-- Main Footer Content -->
+            <div class="footer-main">
+                <div class="container">
+                    <div class="footer-grid">
+                        <!-- Brand & About Section -->
+                        <div class="footer-brand-section">
+                            <div class="brand-container">
+                                <a class="footer-brand" href="index.html">
+                                    <div class="brand-icon-wrapper">
+                                        <i class="fa-solid fa-bolt brand-icon"></i>
+                                    </div>
+                                    <span class="brand-name">ElectroShop</span>
+                                </a>
+                                <!-- Contact & Address Info -->
+                                <div class="company-details">
+                                    <div class="detail-item">
+                                        <i class="fa-solid fa-phone detail-icon"></i>
+                                        <div class="detail-content">
+                                            <span class="detail-label">Call Us</span>
+                                            <span class="detail-value">+1 (555) 123-4567</span>
+                                        </div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fa-solid fa-envelope detail-icon"></i>
+                                        <div class="detail-content">
+                                            <span class="detail-label">Email</span>
+                                            <span class="detail-value">hello@electroshop.com</span>
+                                        </div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fa-solid fa-map-marker-alt detail-icon"></i>
+                                        <div class="detail-content">
+                                            <span class="detail-label">Visit Us</span>
+                                            <span class="detail-value">123 Electric Ave, Tech City, TC 12345</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Links -->
+                        <div class="footer-links-section">
+                            <h4 class="footer-heading">Quick Links</h4>
+                            <ul class="footer-links">
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#products">Products</a></li>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="#about">About Us</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Services -->
+                        <div class="footer-links-section">
+                            <h4 class="footer-heading">Services</h4>
+                            <ul class="footer-links">
+                                <li><a href="#installation">Installation</a></li>
+                                <li><a href="#maintenance">Maintenance</a></li>
+                                <li><a href="#repair">Repair Services</a></li>
+                                <li><a href="#consultation">Consultation</a></li>
+                                <li><a href="#emergency">24/7 Support</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Newsletter & Social -->
+                        <div class="footer-connect-section">
+                            <h4 class="footer-heading">Stay Connected</h4>
+                            <p class="connect-text">Get the latest updates on new products and exclusive offers.</p>
+
+                            <!-- Newsletter -->
+                            <div class="newsletter-container">
+                                <div class="newsletter-input-wrapper">
+                                    <input type="email" placeholder="Your email address" class="newsletter-input">
+                                    <button type="submit" class="newsletter-submit">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                                <p class="newsletter-privacy">We respect your privacy. Unsubscribe anytime.</p>
+                            </div>
+
+                            <!-- Social Links -->
+                            <div class="social-section">
+                                <span class="social-label">Follow Us</span>
+                                <div class="social-links">
+                                    <a href="#" class="social-link facebook" aria-label="Facebook">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="social-link twitter" aria-label="Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="social-link instagram" aria-label="Instagram">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="#" class="social-link linkedin" aria-label="LinkedIn">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-bottom-content">
+                        <div class="copyright">
+                            <span>&copy; 2025 ElectroShop. All rights reserved.</span>
+                        </div>
+                        <div class="footer-bottom-links">
+                            <a href="#privacy">Privacy Policy</a>
+                            <a href="#terms">Terms of Service</a>
+                            <a href="#cookies">Cookie Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enhanced Scroll to Top Button -->
+    <!--<div class="scroll-to-top" id="scrollTopBtn">
+        <div class="scroll-btn-inner">
+            <i class="fa-solid fa-chevron-up"></i>
+        </div>
+        <div class="scroll-progress">
+            <svg class="progress-ring" width="60" height="60">
+                <circle class="progress-ring-circle" stroke="currentColor" stroke-width="2" fill="transparent" r="28" cx="30" cy="30" />
+            </svg>
+        </div>
+    </div>-->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // AOS init
+        AOS.init({ once: true, duration: 700 });
+
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        darkModeToggle.addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 300) {
+                scrollTopBtn.style.display = 'block';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        });
+        scrollTopBtn.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Navbar shrink on scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar-custom');
+            if (window.scrollY > 60) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>

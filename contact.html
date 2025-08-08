@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us – ElectroShop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/contact.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fa-solid fa-bolt" style="color:var(--accent);"></i> ElectroShop
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+                <button id="darkModeToggle" class="btn btn-outline-secondary ms-3" aria-label="Toggle dark mode">
+                    <i class="fa-regular fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section-modern">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="contact-header">
+                <div class="contact-badge">Get In Touch</div>
+                <h2 class="contact-title">Let's Build Something Amazing Together</h2>
+                <p class="contact-subtitle">
+                    Ready to transform your space with cutting-edge electrical solutions?
+                    Our experts are here to guide you every step of the way.
+                </p>
+            </div>
+
+            <!-- Main Contact Content -->
+            <div class="row g-5">
+                <!-- Contact Form -->
+                <div class="col-lg-7">
+                    <div class="contact-form-wrapper">
+                        <div class="form-header">
+                            <div class="form-icon">
+                                <i class="fas fa-paper-plane"></i>
+                            </div>
+                            <h3>Send us a Message</h3>
+                            <p>Fill out the form below and we'll get back to you within 24 hours</p>
+                        </div>
+
+                        <form id="modernContactForm" class="modern-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName" class="form-label">
+                                        <i class="fas fa-user"></i>
+                                        First Name
+                                    </label>
+                                    <input type="text" class="form-input" id="firstName" placeholder="John" required>
+                                    <div class="input-focus-border"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName" class="form-label">
+                                        <i class="fas fa-user"></i>
+                                        Last Name
+                                    </label>
+                                    <input type="text" class="form-input" id="lastName" placeholder="Doe" required>
+                                    <div class="input-focus-border"></div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email" class="form-label">
+                                        <i class="fas fa-envelope"></i>
+                                        Email Address
+                                    </label>
+                                    <input type="email" class="form-input" id="email" placeholder="john@example.com" required>
+                                    <div class="input-focus-border"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">
+                                        <i class="fas fa-phone"></i>
+                                        Phone Number
+                                    </label>
+                                    <input type="tel" class="form-input" id="phone" placeholder="+91 99999 99999">
+                                    <div class="input-focus-border"></div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="form-label">
+                                    <i class="fas fa-tag"></i>
+                                    Subject
+                                </label>
+                                <select class="form-input form-select" id="subject" required>
+                                    <option value="">Choose a topic...</option>
+                                    <option value="product-inquiry">Product Inquiry</option>
+                                    <option value="technical-support">Technical Support</option>
+                                    <option value="installation">Installation Services</option>
+                                    <option value="partnership">Partnership</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="input-focus-border"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">
+                                    <i class="fas fa-comment-alt"></i>
+                                    Message
+                                </label>
+                                <textarea class="form-input form-textarea" id="message" rows="5" placeholder="Tell us about your project or question..." required></textarea>
+                                <div class="input-focus-border"></div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="submit-button">
+                                    <span class="button-text">
+                                        <i class="fas fa-paper-plane"></i>
+                                        Send Message
+                                    </span>
+                                    <span class="button-loading">
+                                        <i class="fas fa-spinner fa-spin"></i>
+                                        Sending...
+                                    </span>
+                                </button>
+                            </div>
+
+                            <div id="formSuccess" class="form-alert form-success">
+                                <div class="alert-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="alert-content">
+                                    <h4>Message Sent Successfully!</h4>
+                                    <p>Thank you for contacting us. We'll get back to you within 24 hours.</p>
+                                </div>
+                            </div>
+
+                            <div id="formError" class="form-alert form-error">
+                                <div class="alert-icon">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="alert-content">
+                                    <h4>Something went wrong</h4>
+                                    <p>Please try again or contact us directly via phone or email.</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="col-lg-5">
+                    <div class="contact-info-wrapper">
+                        <!-- Quick Contact Cards -->
+                        <div class="contact-cards">
+                            <div class="contact-card phone-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Call Us</h4>
+                                    <p>+91 99999 99999</p>
+                                    <span class="card-badge">24/7 Support</span>
+                                </div>
+                                <a href="tel:+919999999999" class="card-action">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+
+                            <div class="contact-card email-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Email Us</h4>
+                                    <p>support@electroshop.com</p>
+                                    <span class="card-badge">Quick Response</span>
+                                </div>
+                                <a href="mailto:support@electroshop.com" class="card-action">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+
+                            <div class="contact-card location-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Visit Our Store</h4>
+                                    <p>123 Main Street<br>New Delhi, India</p>
+                                    <span class="card-badge">Mon-Sat 9AM-8PM</span>
+                                </div>
+                                <a href="#" class="card-action">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- WhatsApp CTA -->
+                        <div class="whatsapp-cta">
+                            <div class="whatsapp-content">
+                                <div class="whatsapp-icon">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div class="whatsapp-text">
+                                    <h4>Need Instant Help?</h4>
+                                    <p>Chat with our experts on WhatsApp for immediate assistance</p>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/919999999999" target="_blank" class="whatsapp-button">
+                                <i class="fab fa-whatsapp"></i>
+                                Start Chat
+                            </a>
+                        </div>
+
+                        <!-- Business Hours -->
+                        <div class="business-hours">
+                            <h4>Business Hours</h4>
+                            <div class="hours-grid">
+                                <div class="hour-item">
+                                    <span class="day">Monday - Friday</span>
+                                    <span class="time">9:00 AM - 8:00 PM</span>
+                                </div>
+                                <div class="hour-item">
+                                    <span class="day">Saturday</span>
+                                    <span class="time">9:00 AM - 6:00 PM</span>
+                                </div>
+                                <div class="hour-item">
+                                    <span class="day">Sunday</span>
+                                    <span class="time">10:00 AM - 4:00 PM</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="social-connect">
+                            <h4>Connect With Us</h4>
+                            <div class="social-links">
+                                <a href="#" class="social-link facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-link twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-link instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-link linkedin">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-link youtube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center mt-5">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-md-6 text-md-start mb-3 mb-md-0">
+                    <a class="navbar-brand" href="index.html">
+                        <i class="fa-solid fa-bolt" style="color:var(--accent);"></i> ElectroShop
+                    </a>
+                    <div class="mt-2 small">Your trusted electrical partner since 2000.</div>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="section-divider"></div>
+            <div class="small">&copy; 2024 ElectroShop. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button type="button" class="btn btn-primary rounded-circle shadow-lg position-fixed" id="scrollTopBtn" style="bottom:2rem;right:2rem;display:none;z-index:999;" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // AOS init
+        AOS.init({ once: true, duration: 700 });
+
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        darkModeToggle.addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 300) {
+                scrollTopBtn.style.display = 'block';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        });
+        scrollTopBtn.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Navbar shrink on scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar-custom');
+            if (window.scrollY > 60) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Contact form simulation
+        const contactForm = document.getElementById('contactForm');
+        const formAlert = document.getElementById('formAlert');
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            formAlert.classList.remove('d-none');
+            contactForm.reset();
+            setTimeout(() => {
+                formAlert.classList.add('d-none');
+            }, 3500);
+        });
+    </script>
+</body>
+</html>
