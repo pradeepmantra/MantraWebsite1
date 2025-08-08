@@ -21,8 +21,8 @@
     <!-- Navbar - Keeping existing implementation -->
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <i class="fa-solid fa-bolt" style="color:var(--accent);"></i> ElectroShop
+            <a class=" navbar-logo-wrapper" href="index.html">
+                <img src="assets/Images/logo/IMG_4795.PNG" alt="Ashapura Electricals" class="navbar-logo-img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -38,9 +38,9 @@
                         <a class="nav-link" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
                     </li>
                 </ul>
-                <button id="darkModeToggle" class="btn btn-outline-secondary ms-3" aria-label="Toggle dark mode">
+                <!--<button id="darkModeToggle" class="btn btn-outline-secondary ms-3" aria-label="Toggle dark mode">
                     <i class="fa-regular fa-moon"></i>
-                </button>
+                </button>-->
             </div>
         </div>
     </nav>
@@ -375,7 +375,7 @@
             </div>
 
             <!-- Bottom CTA -->
-            <div class="section-cta" data-aos="fade-up" data-aos-delay="700">
+            <!--<div class="section-cta" data-aos="fade-up" data-aos-delay="700">
                 <p>Ready to experience the ElectroShop difference?</p>
                 <a href="products.html" class="cta-link">
                     <span>Explore Our Products</span>
@@ -383,7 +383,7 @@
                         <path d="m9 18 6-6-6-6" />
                     </svg>
                 </a>
-            </div>
+            </div>-->
         </div>
     </section>
 
@@ -726,11 +726,8 @@
                         <!-- Brand & About Section -->
                         <div class="footer-brand-section">
                             <div class="brand-container">
-                                <a class="footer-brand" href="index.html">
-                                    <div class="brand-icon-wrapper">
-                                        <i class="fa-solid fa-bolt brand-icon"></i>
-                                    </div>
-                                    <span class="brand-name">ElectroShop</span>
+                                <a class=" navbar-logo-wrapper" href="index.html">
+                                    <img src="assets/Images/logo/IMG_4795.PNG" alt="Ashapura Electricals" class="navbar-logo-img">
                                 </a>
                                 <!-- Contact & Address Info -->
                                 <div class="company-details">
@@ -738,21 +735,21 @@
                                         <i class="fa-solid fa-phone detail-icon"></i>
                                         <div class="detail-content">
                                             <span class="detail-label">Call Us</span>
-                                            <span class="detail-value">+1 (555) 123-4567</span>
+                                            <span class="detail-value">+91 98250 74523</span>
                                         </div>
                                     </div>
                                     <div class="detail-item">
                                         <i class="fa-solid fa-envelope detail-icon"></i>
                                         <div class="detail-content">
                                             <span class="detail-label">Email</span>
-                                            <span class="detail-value">hello@electroshop.com</span>
+                                            <span class="detail-value">ashapuraelectricals83@gmail.com</span>
                                         </div>
                                     </div>
                                     <div class="detail-item">
                                         <i class="fa-solid fa-map-marker-alt detail-icon"></i>
                                         <div class="detail-content">
                                             <span class="detail-label">Visit Us</span>
-                                            <span class="detail-value">123 Electric Ave, Tech City, TC 12345</span>
+                                            <span class="detail-value">Plot no.32 ,Devam Techno Park, Opp. GIDC Gate ,Paligaon, Sachin, Surat -394230</span>
                                         </div>
                                     </div>
                                 </div>
@@ -840,17 +837,7 @@
         </div>
     </footer>
 
-    <!-- Enhanced Scroll to Top Button -->
-    <!--<div class="scroll-to-top" id="scrollTopBtn">
-        <div class="scroll-btn-inner">
-            <i class="fa-solid fa-chevron-up"></i>
-        </div>
-        <div class="scroll-progress">
-            <svg class="progress-ring" width="60" height="60">
-                <circle class="progress-ring-circle" stroke="currentColor" stroke-width="2" fill="transparent" r="28" cx="30" cy="30" />
-            </svg>
-        </div>
-    </div>-->
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- AOS JS -->
@@ -859,33 +846,44 @@
         // AOS init
         AOS.init({ once: true, duration: 700 });
 
-        // Dark mode toggle
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        darkModeToggle.addEventListener('click', function () {
-            document.body.classList.toggle('dark-mode');
-        });
+        //// Dark mode toggle
+        //const darkModeToggle = document.getElementById('darkModeToggle');
+        //darkModeToggle.addEventListener('click', function () {
+        //    document.body.classList.toggle('dark-mode');
+        //});
 
-        // Scroll to top button
-        const scrollTopBtn = document.getElementById('scrollTopBtn');
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 300) {
-                scrollTopBtn.style.display = 'block';
-            } else {
-                scrollTopBtn.style.display = 'none';
-            }
-        });
-        scrollTopBtn.addEventListener('click', function () {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // Navbar shrink on scroll
-        window.addEventListener('scroll', function () {
+        // Sticky Navbar on Scroll
+        document.addEventListener('DOMContentLoaded', function () {
             const navbar = document.querySelector('.navbar-custom');
-            if (window.scrollY > 60) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
+            const navbarHeight = navbar.offsetHeight;
+            let lastScrollY = window.scrollY;
+
+            function handleNavbarScroll() {
+                const currentScrollY = window.scrollY;
+
+                // Add scrolled class when scrolling down past navbar height
+                if (currentScrollY > navbarHeight) {
+                    navbar.classList.add('scrolled', 'navbar-sticky');
+                } else {
+                    navbar.classList.remove('scrolled', 'navbar-sticky');
+                }
+
+                lastScrollY = currentScrollY;
             }
+
+            // Throttle scroll events for better performance
+            let ticking = false;
+            function requestTick() {
+                if (!ticking) {
+                    requestAnimationFrame(handleNavbarScroll);
+                    ticking = true;
+                }
+            }
+
+            window.addEventListener('scroll', function () {
+                requestTick();
+                ticking = false;
+            });
         });
     </script>
 </body>
