@@ -14,15 +14,40 @@
     <link href="css/brands.css" rel="stylesheet">
     <link href="css/CTAbanner.css" rel="stylesheet">
     <link href="css/whychooseus.css" rel="stylesheet" />
+    <link href="css/loader.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Navbar - Keeping existing implementation -->
-    <nav class="navbar navbar-expand-lg navbar-custom">
+    <div id="pageLoader" class="simple-page-loader">
+        <div class="loader-content">
+            <!-- Logo with rotating circle -->
+            <div class="logo-loader">
+                <!-- Rotating circle -->
+                <div class="rotating-circle"></div>
+
+                <!-- Your logo -->
+                <div class="logo-container">
+                    <img src="assets/Images/logo/loader.png" alt="Logo" class="logo-image">
+                </div>
+            </div>
+
+            <!-- Optional loading text -->
+            <div class="loading-text">
+                <span>Loading...</span>
+            </div>
+
+            <!-- Simple progress bar (optional) -->
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar - Updated for transparent background -->
+    <nav class="navbar navbar-expand-lg navbar-custom navbar-transparent">
         <div class="container">
-            <a class=" navbar-logo-wrapper" href="index.html">
-                <img src="assets/Images/logo/IMG_4795.PNG" alt="Ashapura Electricals" class="navbar-logo-img">
+            <a class="navbar-logo-wrapper" href="index.html">
+                <img src="assets/Images/logo/IMG_4795h.PNG" alt="hh" class="navbar-logo-img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -38,9 +63,6 @@
                         <a class="nav-link" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
                     </li>
                 </ul>
-                <!--<button id="darkModeToggle" class="btn btn-outline-secondary ms-3" aria-label="Toggle dark mode">
-                    <i class="fa-regular fa-moon"></i>
-                </button>-->
             </div>
         </div>
     </nav>
@@ -50,8 +72,9 @@
 
         <!-- Video Background -->
         <video autoplay muted loop playsinline class="bg-video">
-            <source src="assets/Videos/1531069-uhd_3840_2160_30fps.mp4" type="video/mp4">
-            <!--<source src="assets/Videos/856319-hd_1920_1080_30fps.mp4" type="video/mp4">-->
+            <!--<source src="assets/Videos/home_background.mp4" type="video/mp4">-->
+            <source src="assets/Videos/Untitled design.mp4" type="video/mp4">
+            <!--<source src="assets/Videos/154647-808044372_small.mp4" type="video/mp4" />-->
             Your browser does not support HTML5 video.
         </video>
 
@@ -843,6 +866,67 @@
     <!-- AOS JS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
+        class SimpleLoader {
+            constructor() {
+                this.loader = document.getElementById('pageLoader');
+                this.progressFill = document.getElementById('progressFill');
+                this.progress = 0;
+                this.init();
+            }
+
+            init() {
+                document.body.style.overflow = 'hidden';
+                this.startLoading();
+                this.setupListeners();
+            }
+
+            startLoading() {
+                // Simulate progress
+                const interval = setInterval(() => {
+                    this.progress += Math.random() * 15;
+                    if (this.progress >= 100) {
+                        this.progress = 100;
+                        clearInterval(interval);
+                        this.completeLoading();
+                    }
+                    this.updateProgress();
+                }, 200);
+            }
+
+            setupListeners() {
+                // Wait for page load
+                window.addEventListener('load', () => {
+                    setTimeout(() => this.completeLoading(), 300);
+                });
+
+                // Fallback timeout
+                setTimeout(() => this.completeLoading(), 5000);
+            }
+
+            updateProgress() {
+                if (this.progressFill) {
+                    this.progressFill.style.width = `${this.progress}%`;
+                }
+            }
+
+            completeLoading() {
+                this.progress = 100;
+                this.updateProgress();
+
+                setTimeout(() => {
+                    this.loader.classList.add('fade-out');
+                    setTimeout(() => {
+                        this.loader.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }, 50000);
+                }, 20000);
+            }
+        }
+
+        // Initialize when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            new SimpleLoader();
+        });
         // AOS init
         AOS.init({ once: true, duration: 700 });
 
@@ -858,14 +942,18 @@
             const navbarHeight = navbar.offsetHeight;
             let lastScrollY = window.scrollY;
 
+            // Updated scroll handler for transparent navbar
             function handleNavbarScroll() {
                 const currentScrollY = window.scrollY;
+                const heroSection = document.querySelector('.hero-section');
+                const heroHeight = heroSection ? heroSection.offsetHeight : 600;
 
-                // Add scrolled class when scrolling down past navbar height
-                if (currentScrollY > navbarHeight) {
-                    navbar.classList.add('scrolled', 'navbar-sticky');
+                if (currentScrollY > 100) {
+                    navbar.classList.add('scrolled');
+                    navbar.classList.remove('navbar-transparent');
                 } else {
-                    navbar.classList.remove('scrolled', 'navbar-sticky');
+                    navbar.classList.remove('scrolled');
+                    navbar.classList.add('navbar-transparent');
                 }
 
                 lastScrollY = currentScrollY;
