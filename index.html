@@ -8,13 +8,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/product.css" rel="stylesheet">
+    <!--<link href="css/product.css" rel="stylesheet">-->
     <link href="css/testimonial.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
     <link href="css/brands.css" rel="stylesheet">
     <link href="css/CTAbanner.css" rel="stylesheet">
-    <link href="css/whychooseus.css" rel="stylesheet" />
+    <link href="css/whychooseus.css" rel="stylesheet">
     <link href="css/loader.css" rel="stylesheet">
+    <link href="css/featured_products.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
@@ -47,7 +48,7 @@
     <nav class="navbar navbar-expand-lg navbar-custom navbar-transparent">
         <div class="container">
             <a class="navbar-logo-wrapper" href="index.html">
-                <img src="assets/Images/logo/IMG_4795h.PNG" alt="hh" class="navbar-logo-img">
+                <img src="assets/Images/logo/IMG_4795.PNG" alt="hh" class="navbar-logo-img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -91,84 +92,33 @@
             </div>
         </div>
 
-        <!-- Optional: dark overlay -->
-        <!--<div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 z-0"></div>-->
+        <!--Optional: dark overlay
+        <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 z-0"></div>-->
     </section>
 
-
-    <!-- Featured Products Section -->
-    <section class="featured-products py-5" data-aos="fade-up">
-        <div class="container">
-            <h2 class="text-center mb-5">Featured Products</h2>
-            <div class="row g-4">
-                <!-- Featured Product 1 -->
-                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card product-card h-100">
-                        <img src="assets/Images/Products/Smart LED Bulb.jpg" class="card-img-top" alt="Smart LED Bulb" />
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Smart LED Bulb</h5>
-                            <p class="card-text">Energy-efficient smart lighting for modern homes</p>
-                            <div class="mt-auto">
-                                <span class="text-primary fw-bold">₹499</span>
-                                <a href="products.html" class="btn btn-outline-primary btn-sm float-end">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Featured Product 2 -->
-                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card product-card h-100">
-                        <img src="assets/Images/Products/WiFi Smart Switch.jpg" class="card-img-top" alt="WiFi Smart Switch" />
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">WiFi Smart Switch</h5>
-                            <p class="card-text">Control your devices from anywhere</p>
-                            <div class="mt-auto">
-                                <span class="text-primary fw-bold">₹899</span>
-                                <a href="products.html" class="btn btn-outline-primary btn-sm float-end">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Featured Product 3 -->
-                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card product-card h-100">
-                        <img src="assets/Images/Products/Motion Sensor Light.jpg" class="card-img-top" alt="Motion Sensor Light" />
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Motion Sensor</h5>
-                            <p class="card-text">Automated lighting for security</p>
-                            <div class="mt-auto">
-                                <span class="text-primary fw-bold">₹599</span>
-                                <a href="products.html" class="btn btn-outline-primary btn-sm float-end">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Enhanced Why Choose Us Section -->
     <section class="why-choose-section" data-aos="fade-up">
         <div class="why-choose-container">
             <!-- Header -->
-            <div class="section-header">
-                <div class="section-badge">
+            <div class="whychooseus-section-header">
+                <div class="whychooseus-section-badge">
                     <span>Why ElectroShop</span>
                 </div>
-                <h2 class="section-title">
-                    Setting the Standard in
-                    <span class="highlight-text">Electronics Excellence</span>
+                <h2 class="whychooseus-section-title">
+                    Your One-Stop Shop
+                    <span class="highlight-text"> for Quality Electricals</span>
                 </h2>
-                <p class="section-description">
+                <p class="whychooseus-section-description">
                     Experience the difference with our commitment to quality, innovation, and customer satisfaction
                 </p>
             </div>
 
             <!-- Features Grid -->
-            <div class="features-grid">
+            <div class="whychooseus-features-grid">
                 <!-- Feature 1 -->
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="feature-card-inner">
+                <div class="whychooseus-feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="whychooseus-feature-card-inner">
                         <div class="feature-front">
                             <div class="feature-icon">
                                 <div class="icon-bg"></div>
@@ -178,8 +128,8 @@
                                     <circle cx="12" cy="12" r="1" />
                                 </svg>
                             </div>
-                            <h3 class="feature-title">Premium Quality</h3>
-                            <p class="feature-description">
+                            <h3 class="whychooseus-feature-title">Premium Quality</h3>
+                            <p class="whychooseus-feature-description">
                                 Rigorously tested and certified products with industry-leading quality standards
                             </p>
                             <div class="feature-stats">
@@ -204,8 +154,8 @@
                 </div>
 
                 <!-- Feature 2 -->
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature-card-inner">
+                <div class="whychooseus-feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="whychooseus-feature-card-inner">
                         <div class="feature-front">
                             <div class="feature-icon">
                                 <div class="icon-bg"></div>
@@ -220,8 +170,8 @@
                                     <path d="m3 21 7-7" />
                                 </svg>
                             </div>
-                            <h3 class="feature-title">Lightning Fast</h3>
-                            <p class="feature-description">
+                            <h3 class="whychooseus-feature-title">Lightning Fast</h3>
+                            <p class="whychooseus-feature-description">
                                 Same-day dispatch with express delivery options across all major cities
                             </p>
                             <div class="feature-stats">
@@ -246,8 +196,8 @@
                 </div>
 
                 <!-- Feature 3 -->
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="feature-card-inner">
+                <div class="whychooseus-feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="whychooseus-feature-card-inner">
                         <div class="feature-front">
                             <div class="feature-icon">
                                 <div class="icon-bg"></div>
@@ -260,8 +210,8 @@
                                     <path d="M20 12h2" />
                                 </svg>
                             </div>
-                            <h3 class="feature-title">Expert Support</h3>
-                            <p class="feature-description">
+                            <h3 class="whychooseus-feature-title">Expert Support</h3>
+                            <p class="whychooseus-feature-description">
                                 Professional technical support and installation guidance from certified experts
                             </p>
                             <div class="feature-stats">
@@ -286,8 +236,8 @@
                 </div>
 
                 <!-- Feature 4 -->
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="feature-card-inner">
+                <div class="whychooseus-feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="whychooseus-feature-card-inner">
                         <div class="feature-front">
                             <div class="feature-icon">
                                 <div class="icon-bg"></div>
@@ -299,8 +249,8 @@
                                     <path d="M22 12h-6" />
                                 </svg>
                             </div>
-                            <h3 class="feature-title">Smart Solutions</h3>
-                            <p class="feature-description">
+                            <h3 class="whychooseus-feature-title">Smart Solutions</h3>
+                            <p class="whychooseus-feature-description">
                                 Cutting-edge smart home integration and IoT-enabled electronics
                             </p>
                             <div class="feature-stats">
@@ -325,8 +275,8 @@
                 </div>
 
                 <!-- Feature 5 -->
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="feature-card-inner">
+                <div class="whychooseus-feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="whychooseus-feature-card-inner">
                         <div class="feature-front">
                             <div class="feature-icon">
                                 <div class="icon-bg"></div>
@@ -335,8 +285,8 @@
                                     <path d="M12 6v6l4 2" />
                                 </svg>
                             </div>
-                            <h3 class="feature-title">Lifetime Value</h3>
-                            <p class="feature-description">
+                            <h3 class="whychooseus-feature-title">Lifetime Value</h3>
+                            <p class="whychooseus-feature-description">
                                 Extended warranties, trade-in programs, and ongoing maintenance support
                             </p>
                             <div class="feature-stats">
@@ -361,8 +311,8 @@
                 </div>
 
                 <!-- Feature 6 -->
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="feature-card-inner">
+                <div class="whychooseus-feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="whychooseus-feature-card-inner">
                         <div class="feature-front">
                             <div class="feature-icon">
                                 <div class="icon-bg"></div>
@@ -371,8 +321,8 @@
                                     <path d="M2 12h1m9-9v1M1 12v1m9 9v-1m9-9h-1M4.2 7.8l.7.7m12.1-.7-.7.7m0 8.4.7-.7m-12.1.7.7-.7" />
                                 </svg>
                             </div>
-                            <h3 class="feature-title">Eco-Friendly</h3>
-                            <p class="feature-description">
+                            <h3 class="whychooseus-feature-title">Eco-Friendly</h3>
+                            <p class="whychooseus-feature-description">
                                 Sustainable practices with energy-efficient products and recycling programs
                             </p>
                             <div class="feature-stats">
@@ -396,25 +346,129 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Bottom CTA -->
-            <!--<div class="section-cta" data-aos="fade-up" data-aos-delay="700">
-                <p>Ready to experience the ElectroShop difference?</p>
-                <a href="products.html" class="cta-link">
-                    <span>Explore Our Products</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="m9 18 6-6-6-6" />
-                    </svg>
-                </a>
-            </div>-->
         </div>
     </section>
+    <!-- Featured Products Section -->
+    <section class="featured-products py-5">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header text-center mb-5">
+                <h2 class="whychooseus-section-title mb-3">Our <span class="highlight-text"> Product  Range</span></h2>
+                <p class="section-subtitle">Explore our wide collection of trusted electrical solutions for homes & businesses.</p>
+            </div>
+
+            <!-- Category Row 1 - Image Left, Text Right -->
+            <div class="row category-row mb-5 align-items-center">
+                <div class="col-md-5 mb-4 mb-md-0">
+                    <div class="category-image">
+                        <img src="assets/Images/Products/Smart LED Bulb.jpg"
+                             alt="Lighting Solutions" class="img-fluid rounded">
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="category-content">
+                        <h3 class="category-title mb-3">Lighting Solutions</h3>
+                        <ul class="category-features mb-4">
+                            <li><i class="fas fa-check-circle me-2"></i>LED Bulbs & Smart Lighting Systems</li>
+                            <li><i class="fas fa-check-circle me-2"></i>Energy-Efficient Indoor & Outdoor Fixtures</li>
+                            <li><i class="fas fa-check-circle me-2"></i>Commercial & Residential Options</li>
+                        </ul>
+                        <a href="#" class="btn-explore">
+                            <span>Explore</span>
+                            <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category Row 2 - Text Left, Image Right -->
+            <div class="row category-row mb-5 align-items-center">
+                <div class="col-md-5 order-md-2 mb-4 mb-md-0">
+                    <div class="category-image">
+                        <img src="assets/Images/Products/Smart Thermostat.jpg"
+                             alt="Switches & Sockets" class="img-fluid rounded">
+                    </div>
+                </div>
+                <div class="col-md-7 order-md-1">
+                    <div class="category-content">
+                        <h3 class="category-title mb-3">Switches & Sockets</h3>
+                        <ul class="category-features mb-4">
+                            <li><i class="fas fa-check-circle me-2"></i>Premium Modular Switches & Smart Controls</li>
+                            <li><i class="fas fa-check-circle me-2"></i>USB Charging Points & Power Outlets</li>
+                            <li><i class="fas fa-check-circle me-2"></i>Weather-Resistant & Safety Certified</li>
+                        </ul>
+                        <a href="#" class="btn-explore">
+                            <span>Explore</span>
+                            <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category Row 3 - Image Left, Text Right -->
+            <div class="row category-row mb-5 align-items-center">
+                <div class="col-md-5 mb-4 mb-md-0">
+                    <div class="category-image">
+                        <img src="assets/Images/Products/Surge Protector.jpg"
+                             alt="Wires & Cables" class="img-fluid rounded">
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="category-content">
+                        <h3 class="category-title mb-3">Wires & Cables</h3>
+                        <ul class="category-features mb-4">
+                            <li><i class="fas fa-check-circle me-2"></i>High-Quality Copper & Aluminum Wiring</li>
+                            <li><i class="fas fa-check-circle me-2"></i>Flexible & Armored Cable Solutions</li>
+                            <li><i class="fas fa-check-circle me-2"></i>ISI Marked & Fire-Resistant Options</li>
+                        </ul>
+                        <a href="#" class="btn-explore">
+                            <span>Explore</span>
+                            <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category Row 4 - Text Left, Image Right -->
+            <div class="row category-row mb-5 align-items-center">
+                <div class="col-md-5 order-md-2 mb-4 mb-md-0">
+                    <div class="category-image">
+                        <img src="assets/Images/Products/Extension Cord.jpg"
+                             alt="Appliances & Panels" class="img-fluid rounded">
+                    </div>
+                </div>
+                <div class="col-md-7 order-md-1">
+                    <div class="category-content">
+                        <h3 class="category-title mb-3">Appliances & Panels</h3>
+                        <ul class="category-features mb-4">
+                            <li><i class="fas fa-check-circle me-2"></i>Distribution Boards & MCB Panels</li>
+                            <li><i class="fas fa-check-circle me-2"></i>Electrical Motors & Control Gear</li>
+                            <li><i class="fas fa-check-circle me-2"></i>Industrial & Domestic Applications</li>
+                        </ul>
+                        <a href="#" class="btn-explore">
+                            <span>Explore</span>
+                            <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Full Catalog Button -->
+            <div class="text-center mt-2 pt-2">
+                <a href="catalog.pdf" target="_blank" class="btn-catalog">
+                    <i class="fas fa-file-pdf me-2"></i>
+                    View Full Catalog
+                </a>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Testimonials Section -->
     <section class="testimonials-section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonial-section-header">
+                <h2 class="testimonial-section-title">What Our Customers Say</h2>
                 <div class="title-underline"></div>
             </div>
 

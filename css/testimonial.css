@@ -49,14 +49,14 @@ body {
     }
 
 /* Section Header */
-.section-header {
+.testimonial-section-header {
     text-align: center;
     margin-bottom: 80px;
     position: relative;
     z-index: 1;
 }
 
-.section-title {
+.testimonial-section-title {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
     color: #1e293b;
