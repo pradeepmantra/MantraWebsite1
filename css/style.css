@@ -685,7 +685,7 @@ section, .section {
   outline-offset: 2px;
 }
 
-img, .card-img-top {
+ .card-img-top {
   border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
