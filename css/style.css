@@ -353,10 +353,11 @@ section, .section {
     }
 }
 
-    
+
 .hero-section .lead {
-        color: #fff;
-        text-shadow: 0 2px 12px rgba(21,67,96,0.18);
+    color: #fff;
+    webkit-text-stroke: .5px #011936;
+    text-shadow: 0 0 5px #011936;
 }
 
 .hero-section .btn {

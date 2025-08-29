@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Construction</title>
+    <link rel="stylesheet" href="css/comingsoon.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-elements">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="grid-pattern"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <div class="construction-visual">
+                <div class="main-icon">
+                    <div class="icon-bg"></div>
+                    <i class="fas fa-tools"></i>
+                </div>
+                <div class="construction-elements">
+                    <div class="element gear-1">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <div class="element gear-2">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <div class="element wrench">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="content-card">
+                <div class="status-chip">
+                    <div class="pulse-dot"></div>
+                    <span>Work in Progress</span>
+                </div>
+
+                <h1 class="main-title">
+                    We're Building
+                    <span class="accent-text">Something Great</span>
+                </h1>
+
+                <p class="description">
+                    Our website is currently under construction. We're crafting an exceptional
+                    digital experience that will be worth the wait.
+                </p>
+
+                <!-- Progress Section -->
+                <div class="progress-section">
+                    <div class="progress-header">
+                        <h3>Development Status</h3>
+                        <span class="progress-percentage">68%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <div class="progress-stages">
+                        <span class="stage completed">Planning</span>
+                        <span class="stage completed">Design</span>
+                        <span class="stage active">Development</span>
+                        <span class="stage">Testing</span>
+                        <span class="stage">Launch</span>
+                    </div>
+                </div>
+
+                <!-- Notification Form -->
+                <div class="notification-section">
+                    <h3>Stay Updated</h3>
+                    <form class="notify-form">
+                        <div class="input-wrapper">
+                            <input type="email" placeholder="Enter your email address" required>
+                            <button type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-section">
+                    <h3>Need Immediate Assistance?</h3>
+                    <div class="contact-grid">
+                        <a href="mailto:hello@company.com" class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>Email</strong>
+                                <span>hello@company.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+1234567890" class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>Phone</strong>
+                                <span>(123) 456-7890</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <footer class="bottom-footer">
+        <div class="footer-content">
+            <div class="company-brand">
+                <i class="fas fa-code"></i>
+                <span>TechCorp Solutions</span>
+            </div>
+            <p>© 2025 - Thank you for your patience</p>
+        </div>
+    </footer>
+
+    <script>
+        // Progress bar animation
+        window.addEventListener('load', function () {
+            setTimeout(() => {
+                document.querySelector('.progress-fill').style.width = '68%';
+            }, 500);
+        });
+
+        // Form submission with smooth feedback
+        document.querySelector('.notify-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const button = e.target.querySelector('button');
+            const input = e.target.querySelector('input');
+
+            if (input.value) {
+                // Success animation
+                button.innerHTML = '<i class="fas fa-check"></i>';
+                button.style.background = '#10b981';
+                input.style.borderColor = '#10b981';
+
+                setTimeout(() => {
+                    button.innerHTML = '<i class="fas fa-paper-plane"></i>';
+                    button.style.background = '';
+                    input.style.borderColor = '';
+                    input.value = '';
+                    input.placeholder = 'Thank you! We\'ll be in touch.';
+
+                    setTimeout(() => {
+                        input.placeholder = 'Enter your email address';
+                    }, 3000);
+                }, 2000);
+            }
+        });
+
+        // Floating animation for construction elements
+        function animateElements() {
+            document.querySelectorAll('.element').forEach((el, index) => {
+                const delay = index * 1000;
+                setTimeout(() => {
+                    el.style.transform = `translateY(${Math.sin(Date.now() * 0.001 + index) * 10}px) rotate(${Math.sin(Date.now() * 0.002 + index) * 20}deg)`;
+                }, delay);
+            });
+        }
+
+        setInterval(animateElements, 100);
+
+        // Floating shapes animation
+        document.querySelectorAll('.floating-shape').forEach((shape, index) => {
+            const duration = 15 + index * 5;
+            shape.style.animationDuration = duration + 's';
+            shape.style.animationDelay = index * 2 + 's';
+        });
+    </script>
+</body>
+</html>
