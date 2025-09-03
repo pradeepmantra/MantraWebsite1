@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - ElectroShop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us – Ashapura Electricals</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/about.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
+    <link href="css/loader.css" rel="stylesheet">
+    <link href="css/about.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-custom">
+    <div id="pageLoader" class="simple-page-loader">
+        <div class="loader-content">
+            <div class="logo-loader">
+                <div class="rotating-circle"></div>
+                <div class="logo-container">
+                    <img src="assets/Images/logo/loader.png" alt="Logo" class="logo-image">
+                </div>
+            </div>
+            <div class="loading-text">
+                <span>Loading...</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar - Same as homepage -->
+    <nav class="navbar navbar-expand-lg navbar-custom navbar-transparent">
         <div class="container">
-            <a class=" navbar-logo-wrapper" href="index.html">
+            <a class="navbar-logo-wrapper" href="index.html">
                 <img src="assets/Images/logo/IMG_4795.PNG" alt="Ashapura Electricals" class="navbar-logo-img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
@@ -28,221 +48,256 @@
                     <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+                    </li>
                 </ul>
-                
             </div>
         </div>
     </nav>
 
-    <!-- About Content -->
-    <div class="container">
-        <!-- Hero Banner -->
-        <section class="about-hero-banner">
-            <div class="about-hero-content">
-                <div class="about-hero-badge">Since 2000</div>
-                <h1 class="about-hero-title">Powering Innovation for Over Two Decades</h1>
-                <p class="about-hero-description">
-                    Leading the electrical revolution with cutting-edge solutions, premium products,
-                    and unmatched expertise that transforms spaces into smart, efficient environments.
-                </p>
+    <!-- About Hero Section - New Style -->
+    <section class="page-hero-section">
+        <img src="assets/Images/Others/about-hero1.jpg"  alt="About Hero" class="hero-background-img"/>    
+        <div class="hero-background-overlay"></div>
+        <div class="container">
+            <div class="hero-content text-center">
+                <nav aria-label="breadcrumb" class="hero-breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <!--<li class="breadcrumb-item"><a href="#">Pages</a></li>-->
+                        <li class="breadcrumb-item active" aria-current="page" >About</li>
+                    </ol>
+                </nav>
+                <h1 class="hero-title">About Us</h1>
             </div>
-            <div class="about-hero-visual">
-                <div class="floating-elements">
-                    <div class="floating-element element-1">
-                        <i class="fas fa-bolt"></i>
+        </div>
+    </section>
+
+    <!-- About Stats Section -->
+    <!--<section class="about-stats-section py-5" data-aos="fade-up">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Years Experience</div>
                     </div>
-                    <div class="floating-element element-2">
-                        <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <div class="stat-number">5000+</div>
+                        <div class="stat-label">Products Delivered</div>
                     </div>
-                    <div class="floating-element element-3">
-                        <i class="fas fa-cog"></i>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">Happy Customers</div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>-->
 
-        <!-- Main About Content -->
-        <section class="about-content-section">
+    <!-- Our Story Section -->
+    <section class="our-story-section" data-aos="fade-up">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="story-content">
+                        <div class="section-header mb-4">
+                            <div class="section-badge">
+                                <span>Our Journey</span>
+                            </div>
+                            <h2 class="section-title">The Story Behind <span class="highlight-text">Ashapura Electricals</span></h2>
+                        </div>
+                        <p class="story-text">
+                            Founded in 2002 with a vision to revolutionize the electrical industry, Ashapura Electricals began as a small family business with big dreams. What started as a modest electrical components store has grown into a leading provider of comprehensive electrical solutions.
+                        </p>
+                        
+                        <p class="story-text">
+                            Our journey has been marked by continuous innovation, unwavering commitment to quality, and an uncompromising focus on customer satisfaction. We've evolved from a traditional electrical shop to a modern, technology-driven company that serves diverse sectors including residential, commercial, and industrial markets.
+                        </p>
+                        <div class="story-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Innovation-Driven Approach</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-handshake"></i>
+                                <span>Customer-Centric Service</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-award"></i>
+                                <span>Quality Assured Products</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="story-image-container">
+                        <img src="assets/Images/Others/about-hero2.jpg" alt="Our Story" class="img-fluid story-image">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h4>23+ Years of Excellence</h4>
+                                <p>Building trust, one connection at a time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Vision Values -->
+    <section class="mission-vision-section" data-aos="fade-up">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="mission-section-title">Our Core <span class="highlight-text">Values</span></h2>
+                <p class="mission-section-subtitle">The principles that guide everything we do</p>
+            </div>
             <div class="row g-4">
-                <!-- Our Story Card -->
+                <div class="col-md-4">
+                    <div class="value-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="value-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 class="value-title">Our Vision</h3>
+                        <p class="value-description">
+                            To be the leading electrical solutions provider, recognized for innovation, quality, and exceptional customer service across all markets we serve.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="value-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 class="value-title">Our Mission</h3>
+                        <p class="value-description">
+                            To empower our customers with cutting-edge electrical solutions, exceptional service, and expert guidance, helping them achieve their goals efficiently and safely.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="value-title">Our Values</h3>
+                        <p class="value-description">
+                            Integrity, innovation, and customer-first approach define our culture. We believe in building lasting relationships through trust, quality, and continuous improvement.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section py-5" data-aos="fade-up">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Meet Our <span class="highlight-text">Expert Team</span></h2>
+                <p class="section-subtitle">The professionals behind our success</p>
+            </div>
+            <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <div class="about-card story-card">
-                        <div class="about-card-header">
-                            <div class="about-card-icon story-icon">
-                                <i class="fas fa-history"></i>
+                    <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-image">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team Member" class="img-fluid">
+                            <div class="team-overlay">
+                                <div class="social-links">
+                                    <!--<a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fas fa-envelope"></i></a>-->
+                                </div>
                             </div>
-                            <h3 class="about-card-title">Our Journey</h3>
                         </div>
-                        <div class="about-card-content">
-                            <p>Since 2000, ElectroShop has pioneered the electrical retail industry, evolving from a traditional supplier to a cutting-edge smart solutions provider. We've consistently pushed boundaries, embracing innovation while maintaining our core values of quality and trust.</p>
-                            <div class="about-card-stats">
-                                <div class="stat-item">
-                                    <span class="stat-number">25+</span>
-                                    <span class="stat-label">Years Experience</span>
-                                </div>
-                                <div class="stat-item">
-                                    <span class="stat-number">50K+</span>
-                                    <span class="stat-label">Happy Customers</span>
-                                </div>
-                            </div>
+                        <div class="team-content">
+                            <h4 class="team-name">Rajesh Patel</h4>
+                            <p class="team-position">Founder & CEO</p>
+                            <p class="team-description">With 25+ years of experience in the electrical industry, Rajesh leads our vision of innovation and excellence.</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Our Mission Card -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="about-card mission-card">
-                        <div class="about-card-header">
-                            <div class="about-card-icon mission-icon">
-                                <i class="fas fa-target"></i>
+                    <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="team-image">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Team Member" class="img-fluid">
+                            <div class="team-overlay">
+                                <!--<div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fas fa-envelope"></i></a>
+                                </div>-->
                             </div>
-                            <h3 class="about-card-title">Our Mission</h3>
                         </div>
-                        <div class="about-card-content">
-                            <p>To revolutionize how people interact with electrical technology by delivering premium products, expert guidance, and sustainable solutions that enhance lives while protecting our planet's future.</p>
-                            <div class="mission-pillars">
-                                <div class="pillar-item">
-                                    <i class="fas fa-award"></i>
-                                    <span>Quality First</span>
-                                </div>
-                                <div class="pillar-item">
-                                    <i class="fas fa-leaf"></i>
-                                    <span>Sustainability</span>
-                                </div>
-                                <div class="pillar-item">
-                                    <i class="fas fa-users"></i>
-                                    <span>Customer Focus</span>
-                                </div>
-                            </div>
+                        <div class="team-content">
+                            <h4 class="team-name">Priya Sharma</h4>
+                            <p class="team-position">Technical Director</p>
+                            <p class="team-description">Expert in electrical systems design and implementation, Priya ensures all our solutions meet the highest technical standards.</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Our Vision Card -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="about-card vision-card">
-                        <div class="about-card-header">
-                            <div class="about-card-icon vision-icon">
-                                <i class="fas fa-eye"></i>
+                    <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="team-image">
+                            <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="Team Member" class="img-fluid">
+                            <div class="team-overlay">
+                                <div class="social-links">
+                                    <!--<a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fas fa-envelope"></i></a>-->
+                                </div>
                             </div>
-                            <h3 class="about-card-title">Our Vision</h3>
                         </div>
-                        <div class="about-card-content">
-                            <p>To become the global leader in smart electrical solutions, setting industry standards for innovation, sustainability, and customer experience while building a connected, energy-efficient future.</p>
-                            <div class="vision-goals">
-                                <div class="goal-item">
-                                    <div class="goal-progress">
-                                        <div class="progress-bar" data-progress="85"></div>
-                                    </div>
-                                    <span class="goal-label">Smart Home Integration</span>
-                                </div>
-                                <div class="goal-item">
-                                    <div class="goal-progress">
-                                        <div class="progress-bar" data-progress="92"></div>
-                                    </div>
-                                    <span class="goal-label">Customer Satisfaction</span>
-                                </div>
-                            </div>
+                        <div class="team-content">
+                            <h4 class="team-name">Amit Kumar</h4>
+                            <p class="team-position">Sales Manager</p>
+                            <p class="team-description">Dedicated to understanding customer needs and providing tailored electrical solutions for every project requirement.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Company Values Section -->
-        <section class="values-section">
-            <div class="values-header">
-                <h2 class="section-title">Core Values That Drive Us</h2>
-                <p class="section-subtitle">The principles that guide every decision and innovation</p>
-            </div>
-
-            <div class="values-grid">
-                <div class="value-item">
-                    <div class="value-icon innovation-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h4>Innovation</h4>
-                    <p>Continuously pushing technological boundaries</p>
-                </div>
-
-                <div class="value-item">
-                    <div class="value-icon reliability-icon">
-                        <i class="fas fa-shield-check"></i>
-                    </div>
-                    <h4>Reliability</h4>
-                    <p>Consistent quality you can depend on</p>
-                </div>
-
-                <div class="value-item">
-                    <div class="value-icon sustainability-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h4>Sustainability</h4>
-                    <p>Environmentally conscious solutions</p>
-                </div>
-
-                <div class="value-item">
-                    <div class="value-icon excellence-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>Excellence</h4>
-                    <p>Exceeding expectations in every interaction</p>
+    <!-- Call to Action -->
+    <!--<section class="about-cta py-5" data-aos="fade-up">
+        <div class="container text-center">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Work With Us?</h2>
+                <p class="cta-description">Let's discuss your electrical needs and find the perfect solution together.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-lg me-3">Get In Touch</a>
+                    <a href="products.html" class="btn btn-outline-primary btn-lg">View Products</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>-->
 
-        <!-- Team Leadership Section -->
-        <section class="leadership-section">
-            <div class="leadership-header">
-                <h2 class="section-title">Leadership Excellence</h2>
-                <p class="section-subtitle">Visionary leaders driving electrical innovation</p>
-            </div>
-
-            <div class="leadership-grid">
-                <div class="leader-card">
-                    <div class="leader-avatar">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <h4>Rajesh Kumar</h4>
-                    <p class="leader-title">Founder & CEO</p>
-                    <p class="leader-bio">25+ years pioneering electrical retail innovation</p>
-                </div>
-
-                <div class="leader-card">
-                    <div class="leader-avatar">
-                        <i class="fas fa-user-cog"></i>
-                    </div>
-                    <h4>Priya Sharma</h4>
-                    <p class="leader-title">CTO</p>
-                    <p class="leader-bio">Leading smart technology integration and R&D</p>
-                </div>
-
-                <div class="leader-card">
-                    <div class="leader-avatar">
-                        <i class="fas fa-user-friends"></i>
-                    </div>
-                    <h4>Amit Singh</h4>
-                    <p class="leader-title">Head of Operations</p>
-                    <p class="leader-bio">Ensuring seamless customer experience nationwide</p>
-                </div>
-            </div>
-        </section>
-    </div>
-    <!-- Professional Modern Footer -->
+    <!-- Footer - Same as homepage -->
     <footer class="modern-footer">
         <div class="footer-wrapper">
-            <!-- Main Footer Content -->
             <div class="footer-main">
                 <div class="container">
                     <div class="footer-grid">
-                        <!-- Brand & About Section -->
                         <div class="footer-brand-section">
                             <div class="brand-container">
-                                <a class=" navbar-logo-wrapper" href="index.html">
+                                <a class="navbar-logo-wrapper" href="index.html">
                                     <img src="assets/Images/logo/IMG_4795.PNG" alt="Ashapura Electricals" class="navbar-logo-img">
                                 </a>
-                                <!-- Contact & Address Info -->
                                 <div class="company-details">
                                     <div class="detail-item">
                                         <i class="fa-solid fa-phone detail-icon"></i>
@@ -262,26 +317,24 @@
                                         <i class="fa-solid fa-map-marker-alt detail-icon"></i>
                                         <div class="detail-content">
                                             <span class="detail-label">Visit Us</span>
-                                            <span class="detail-value">Plot no.32 ,Devam Techno Park, Opp. GIDC Gate ,Paligaon, Sachin, Surat -394230</span>
+                                            <span class="detail-value">Plot no.32, Devam Techno Park, Opp. GIDC Gate, Paligaon, Sachin, Surat -394230</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Quick Links -->
                         <div class="footer-links-section">
                             <h4 class="footer-heading">Quick Links</h4>
                             <ul class="footer-links">
-                                <li><a href="#home">Home</a></li>
-                                <li><a href="#products">Products</a></li>
-                                <li><a href="#services">Services</a></li>
-                                <li><a href="#about">About Us</a></li>
-                                <li><a href="#contact">Contact</a></li>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="products.html">Products</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
                             </ul>
                         </div>
 
-                        <!-- Services -->
                         <div class="footer-links-section">
                             <h4 class="footer-heading">Services</h4>
                             <ul class="footer-links">
@@ -293,12 +346,10 @@
                             </ul>
                         </div>
 
-                        <!-- Newsletter & Social -->
                         <div class="footer-connect-section">
                             <h4 class="footer-heading">Stay Connected</h4>
                             <p class="connect-text">Get the latest updates on new products and exclusive offers.</p>
 
-                            <!-- Newsletter -->
                             <div class="newsletter-container">
                                 <div class="newsletter-input-wrapper">
                                     <input type="email" placeholder="Your email address" class="newsletter-input">
@@ -309,7 +360,6 @@
                                 <p class="newsletter-privacy">We respect your privacy. Unsubscribe anytime.</p>
                             </div>
 
-                            <!-- Social Links -->
                             <div class="social-section">
                                 <span class="social-label">Follow Us</span>
                                 <div class="social-links">
@@ -332,12 +382,11 @@
                 </div>
             </div>
 
-            <!-- Footer Bottom -->
             <div class="footer-bottom">
                 <div class="container">
                     <div class="footer-bottom-content">
                         <div class="copyright">
-                            <span>&copy; 2025 ElectroShop. All rights reserved.</span>
+                            <span>&copy; 2025 Ashapura Electricals. All rights reserved.</span>
                         </div>
                         <div class="footer-bottom-links">
                             <a href="#privacy">Privacy Policy</a>
@@ -350,41 +399,88 @@
         </div>
     </footer>
 
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- AOS JS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
+        // Loader functionality
+        class SimpleLoader {
+            constructor() {
+                this.loader = document.getElementById('pageLoader');
+                this.progressFill = document.getElementById('progressFill');
+                this.progress = 0;
+                this.init();
+            }
+
+            init() {
+                document.body.style.overflow = 'hidden';
+                this.startLoading();
+                this.setupListeners();
+            }
+
+            startLoading() {
+                const interval = setInterval(() => {
+                    this.progress += Math.random() * 15;
+                    if (this.progress >= 100) {
+                        this.progress = 100;
+                        clearInterval(interval);
+                        this.completeLoading();
+                    }
+                    this.updateProgress();
+                }, 200);
+            }
+
+            setupListeners() {
+                window.addEventListener('load', () => {
+                    setTimeout(() => this.completeLoading(), 300);
+                });
+                setTimeout(() => this.completeLoading(), 5000);
+            }
+
+            updateProgress() {
+                if (this.progressFill) {
+                    this.progressFill.style.width = `${this.progress}%`;
+                }
+            }
+
+            completeLoading() {
+                this.progress = 100;
+                this.updateProgress();
+                setTimeout(() => {
+                    this.loader.classList.add('fade-out');
+                    setTimeout(() => {
+                        this.loader.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }, 500);
+                }, 200);
+            }
+        }
+
+        // Initialize when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            new SimpleLoader();
+        });
+
         // AOS init
         AOS.init({ once: true, duration: 700 });
 
-        //// Dark mode toggle
-        //const darkModeToggle = document.getElementById('darkModeToggle');
-        //darkModeToggle.addEventListener('click', function () {
-        //    document.body.classList.toggle('dark-mode');
-        //});
-
-        // Sticky Navbar on Scroll
+        // Navbar scroll functionality
         document.addEventListener('DOMContentLoaded', function () {
             const navbar = document.querySelector('.navbar-custom');
-            const navbarHeight = navbar.offsetHeight;
-            let lastScrollY = window.scrollY;
 
             function handleNavbarScroll() {
                 const currentScrollY = window.scrollY;
 
-                // Add scrolled class when scrolling down past navbar height
-                if (currentScrollY > navbarHeight) {
-                    navbar.classList.add('scrolled', 'navbar-sticky');
+                if (currentScrollY > 100) {
+                    navbar.classList.add('scrolled');
+                    navbar.classList.remove('navbar-transparent');
                 } else {
-                    navbar.classList.remove('scrolled', 'navbar-sticky');
+                    navbar.classList.remove('scrolled');
+                    navbar.classList.add('navbar-transparent');
                 }
-
-                lastScrollY = currentScrollY;
             }
 
-            // Throttle scroll events for better performance
             let ticking = false;
             function requestTick() {
                 if (!ticking) {
@@ -400,4 +496,5 @@
         });
     </script>
 </body>
+
 </html>
