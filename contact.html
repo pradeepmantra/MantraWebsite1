@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact Us – ElectroShop</title>
+    <title>Contact Us – Ashapura Electricals</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/contact.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
+    <link href="css/loader.css" rel="stylesheet">
+    <link href="css/contact.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div id="pageLoader" class="simple-page-loader">
+        <div class="loader-content">
+            <div class="logo-loader">
+                <div class="rotating-circle"></div>
+                <div class="logo-container">
+                    <img src="assets/Images/logo/loader.png" alt="Logo" class="logo-image">
+                </div>
+            </div>
+            <div class="loading-text">
+                <span>Loading...</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar - Same as about page -->
+    <nav class="navbar navbar-expand-lg navbar-custom navbar-transparent">
         <div class="container">
-            <a class=" navbar-logo-wrapper" href="index.html">
+            <a class="navbar-logo-wrapper" href="index.html">
                 <img src="assets/Images/logo/IMG_4795.PNG" alt="Ashapura Electricals" class="navbar-logo-img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
@@ -28,21 +48,42 @@
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+                    </li>
                 </ul>
-               
             </div>
         </div>
     </nav>
 
+    <!-- Contact Hero Section -->
+    <section class="page-hero-section">
+        <img src="assets/Images/Others/about-hero1.jpg" alt="Contact Hero" class="hero-background-img" />
+        <div class="hero-background-overlay"></div>
+        <div class="container">
+            <div class="hero-content text-center">
+                <!--<nav aria-label="breadcrumb" class="hero-breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                    </ol>
+                </nav>-->
+                <h1 class="hero-title">Contact Us</h1>
+                <!--<p class="hero-subtitle">Get in touch with our experts for all your electrical needs</p>-->
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
-    <section class="contact-section-modern">
+    <section class="contact-section-modern" data-aos="fade-up">
         <div class="container">
             <!-- Section Header -->
             <div class="contact-header">
-                <div class="contact-badge">Get In Touch</div>
-                <h2 class="contact-title">Let's Build Something Amazing Together</h2>
-                <p class="contact-subtitle">
+                <div class="section-badge">
+                    <span>Get In Touch</span>
+                </div>
+                <h2 class="section-title">Let's Build Something <span class="highlight-text">Amazing Together</span></h2>
+                <p class="section-subtitle">
                     Ready to transform your space with cutting-edge electrical solutions?
                     Our experts are here to guide you every step of the way.
                 </p>
@@ -69,7 +110,6 @@
                                         First Name
                                     </label>
                                     <input type="text" class="form-input" id="firstName" placeholder="John" required>
-                                    <div class="input-focus-border"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="lastName" class="form-label">
@@ -77,7 +117,6 @@
                                         Last Name
                                     </label>
                                     <input type="text" class="form-input" id="lastName" placeholder="Doe" required>
-                                    <div class="input-focus-border"></div>
                                 </div>
                             </div>
 
@@ -88,7 +127,6 @@
                                         Email Address
                                     </label>
                                     <input type="email" class="form-input" id="email" placeholder="john@example.com" required>
-                                    <div class="input-focus-border"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="phone" class="form-label">
@@ -96,7 +134,6 @@
                                         Phone Number
                                     </label>
                                     <input type="tel" class="form-input" id="phone" placeholder="+91 99999 99999">
-                                    <div class="input-focus-border"></div>
                                 </div>
                             </div>
 
@@ -113,7 +150,6 @@
                                     <option value="partnership">Partnership</option>
                                     <option value="other">Other</option>
                                 </select>
-                                <div class="input-focus-border"></div>
                             </div>
 
                             <div class="form-group">
@@ -122,7 +158,6 @@
                                     Message
                                 </label>
                                 <textarea class="form-input form-textarea" id="message" rows="5" placeholder="Tell us about your project or question..." required></textarea>
-                                <div class="input-focus-border"></div>
                             </div>
 
                             <div class="form-actions">
@@ -168,7 +203,7 @@
                         <div class="contact-cards">
                             <div class="contact-card phone-card">
                                 <div class="card-icon">
-                                    <i class="fas fa-phone-alt"></i>
+                                    <i class="fas fa-phone"></i>
                                 </div>
                                 <div class="card-content">
                                     <h4>Call Us</h4>
@@ -200,10 +235,10 @@
                                 </div>
                                 <div class="card-content">
                                     <h4>Visit Our Store</h4>
-                                    <p>Plot no.32 ,Devam Techno Park, Opp. GIDC Gate,Paligaon, Sachin, Surat -394230</p>
+                                    <p>Plot no.32, Devam Techno Park, Opp. GIDC Gate, Paligaon, Sachin, Surat -394230</p>
                                     <span class="card-badge">Mon-Sat 9AM-8PM</span>
                                 </div>
-                                <a href="https://maps.app.goo.gl/gquuztoYBBDcUdjaA" class="card-action">
+                                <a href="https://maps.app.goo.gl/gquuztoYBBDcUdjaA" class="card-action" target="_blank">
                                     <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -240,48 +275,23 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Social Links -->
-                        <div class="social-connect">
-                            <h4>Connect With Us</h4>
-                            <div class="social-links">
-                                <a href="#" class="social-link facebook">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#" class="social-link twitter">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="#" class="social-link instagram">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="#" class="social-link linkedin">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="#" class="social-link youtube">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Professional Modern Footer -->
+    <!-- Footer - Same as about page -->
     <footer class="modern-footer">
         <div class="footer-wrapper">
-            <!-- Main Footer Content -->
             <div class="footer-main">
                 <div class="container">
                     <div class="footer-grid">
-                        <!-- Brand & About Section -->
                         <div class="footer-brand-section">
                             <div class="brand-container">
-                                <a class=" navbar-logo-wrapper" href="index.html">
+                                <a class="navbar-logo-wrapper" href="index.html">
                                     <img src="assets/Images/logo/IMG_4795.PNG" alt="Ashapura Electricals" class="navbar-logo-img">
                                 </a>
-                                <!-- Contact & Address Info -->
                                 <div class="company-details">
                                     <div class="detail-item">
                                         <i class="fa-solid fa-phone detail-icon"></i>
@@ -301,26 +311,24 @@
                                         <i class="fa-solid fa-map-marker-alt detail-icon"></i>
                                         <div class="detail-content">
                                             <span class="detail-label">Visit Us</span>
-                                            <span class="detail-value">Plot no.32 ,Devam Techno Park, Opp. GIDC Gate ,Paligaon, Sachin, Surat -394230</span>
+                                            <span class="detail-value">Plot no.32, Devam Techno Park, Opp. GIDC Gate, Paligaon, Sachin, Surat -394230</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Quick Links -->
                         <div class="footer-links-section">
                             <h4 class="footer-heading">Quick Links</h4>
                             <ul class="footer-links">
-                                <li><a href="#home">Home</a></li>
-                                <li><a href="#products">Products</a></li>
-                                <li><a href="#services">Services</a></li>
-                                <li><a href="#about">About Us</a></li>
-                                <li><a href="#contact">Contact</a></li>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="products.html">Products</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
                             </ul>
                         </div>
 
-                        <!-- Services -->
                         <div class="footer-links-section">
                             <h4 class="footer-heading">Services</h4>
                             <ul class="footer-links">
@@ -332,12 +340,10 @@
                             </ul>
                         </div>
 
-                        <!-- Newsletter & Social -->
                         <div class="footer-connect-section">
                             <h4 class="footer-heading">Stay Connected</h4>
                             <p class="connect-text">Get the latest updates on new products and exclusive offers.</p>
 
-                            <!-- Newsletter -->
                             <div class="newsletter-container">
                                 <div class="newsletter-input-wrapper">
                                     <input type="email" placeholder="Your email address" class="newsletter-input">
@@ -348,7 +354,6 @@
                                 <p class="newsletter-privacy">We respect your privacy. Unsubscribe anytime.</p>
                             </div>
 
-                            <!-- Social Links -->
                             <div class="social-section">
                                 <span class="social-label">Follow Us</span>
                                 <div class="social-links">
@@ -371,12 +376,11 @@
                 </div>
             </div>
 
-            <!-- Footer Bottom -->
             <div class="footer-bottom">
                 <div class="container">
                     <div class="footer-bottom-content">
                         <div class="copyright">
-                            <span>&copy; 2025 ElectroShop. All rights reserved.</span>
+                            <span>&copy; 2025 Ashapura Electricals. All rights reserved.</span>
                         </div>
                         <div class="footer-bottom-links">
                             <a href="#privacy">Privacy Policy</a>
@@ -389,41 +393,88 @@
         </div>
     </footer>
 
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- AOS JS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
+        // Loader functionality - Same as about page
+        class SimpleLoader {
+            constructor() {
+                this.loader = document.getElementById('pageLoader');
+                this.progressFill = document.getElementById('progressFill');
+                this.progress = 0;
+                this.init();
+            }
+
+            init() {
+                document.body.style.overflow = 'hidden';
+                this.startLoading();
+                this.setupListeners();
+            }
+
+            startLoading() {
+                const interval = setInterval(() => {
+                    this.progress += Math.random() * 15;
+                    if (this.progress >= 100) {
+                        this.progress = 100;
+                        clearInterval(interval);
+                        this.completeLoading();
+                    }
+                    this.updateProgress();
+                }, 200);
+            }
+
+            setupListeners() {
+                window.addEventListener('load', () => {
+                    setTimeout(() => this.completeLoading(), 300);
+                });
+                setTimeout(() => this.completeLoading(), 5000);
+            }
+
+            updateProgress() {
+                if (this.progressFill) {
+                    this.progressFill.style.width = `${this.progress}%`;
+                }
+            }
+
+            completeLoading() {
+                this.progress = 100;
+                this.updateProgress();
+                setTimeout(() => {
+                    this.loader.classList.add('fade-out');
+                    setTimeout(() => {
+                        this.loader.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }, 500);
+                }, 200);
+            }
+        }
+
+        // Initialize when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            new SimpleLoader();
+        });
+
         // AOS init
         AOS.init({ once: true, duration: 700 });
 
-        //// Dark mode toggle
-        //const darkModeToggle = document.getElementById('darkModeToggle');
-        //darkModeToggle.addEventListener('click', function () {
-        //    document.body.classList.toggle('dark-mode');
-        //});
-
-        // Sticky Navbar on Scroll
+        // Navbar scroll functionality - Same as about page
         document.addEventListener('DOMContentLoaded', function () {
             const navbar = document.querySelector('.navbar-custom');
-            const navbarHeight = navbar.offsetHeight;
-            let lastScrollY = window.scrollY;
 
             function handleNavbarScroll() {
                 const currentScrollY = window.scrollY;
 
-                // Add scrolled class when scrolling down past navbar height
-                if (currentScrollY > navbarHeight) {
-                    navbar.classList.add('scrolled', 'navbar-sticky');
+                if (currentScrollY > 100) {
+                    navbar.classList.add('scrolled');
+                    navbar.classList.remove('navbar-transparent');
                 } else {
-                    navbar.classList.remove('scrolled', 'navbar-sticky');
+                    navbar.classList.remove('scrolled');
+                    navbar.classList.add('navbar-transparent');
                 }
-
-                lastScrollY = currentScrollY;
             }
 
-            // Throttle scroll events for better performance
             let ticking = false;
             function requestTick() {
                 if (!ticking) {
@@ -438,17 +489,39 @@
             });
         });
 
-    // Contact form simulation
-    const contactForm = document.getElementById('modernContactForm');
-    const formAlert = document.getElementById('formAlert');
-    contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    formAlert.classList.remove('d-none');
-    contactForm.reset();
-    setTimeout(() => {
-    formAlert.classList.add('d-none');
-    }, 3500);
-    });
+        // Contact form functionality
+        const contactForm = document.getElementById('modernContactForm');
+        const submitButton = contactForm.querySelector('.submit-button');
+        const formSuccess = document.getElementById('formSuccess');
+        const formError = document.getElementById('formError');
+
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Show loading state
+            submitButton.classList.add('loading');
+
+            // Simulate form submission
+            setTimeout(() => {
+                // Hide loading state
+                submitButton.classList.remove('loading');
+
+                // Show success message
+                formSuccess.style.display = 'flex';
+                formSuccess.classList.add('show');
+
+                // Reset form
+                contactForm.reset();
+
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    formSuccess.style.display = 'none';
+                    formSuccess.classList.remove('show');
+                }, 5000);
+
+            }, 2000);
+        });
     </script>
 </body>
+
 </html>
