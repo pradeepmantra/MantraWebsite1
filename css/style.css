@@ -166,12 +166,14 @@ section, .section {
             position: relative;
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             padding-bottom: 0.2rem;
+            display: inline-block;
         }
 
             .navbar-custom.navbar-transparent .navbar-nav .nav-link:hover,
             .navbar-custom.navbar-transparent .navbar-nav .nav-link.active {
                 color: var(--accent);
                 text-shadow: none;
+                display: inline-block;
             }
 
             .navbar-custom.navbar-transparent .navbar-nav .nav-link::after {
@@ -256,6 +258,129 @@ section, .section {
     color: var(--primary) !important;
     letter-spacing: 0.04em;
 }
+/* Hide Bootstrap default caret */
+.navbar-custom .dropdown-toggle::after {
+    display: none !important;
+}
+
+/* Resources dropdown toggle styling */
+.navbar-custom .nav-item.dropdown .nav-link.dropdown-toggle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+    .navbar-custom .nav-item.dropdown .nav-link.dropdown-toggle .fa-chevron-down {
+        transition: all 0.3s ease;
+        font-size: 0.7rem !important;
+        opacity: 0.8;
+    }
+
+.navbar-custom .nav-item.dropdown:hover .fa-chevron-down,
+.navbar-custom .nav-item.dropdown .nav-link[aria-expanded="true"] .fa-chevron-down {
+    transform: rotate(180deg);
+    opacity: 1;
+    color: var(--accent);
+}
+
+/* Dropdown menu base styling */
+.navbar-custom .nav-item.dropdown .dropdown-menu {
+    background: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 14px;
+    padding: 10px 20px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+    margin-top: 8px;
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+/*    border-top: 3px solid var(--accent);*/
+}
+
+    /* Active state */
+    .navbar-custom .nav-item.dropdown .dropdown-menu.show {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        animation: dropdownSlide 0.3s ease forwards;
+    }
+
+/* Dropdown items */
+.navbar-custom .dropdown-item {
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Open Sans', Arial, sans-serif;
+    padding: 12px 20px;
+    color: var(--primary);
+    transition: all 0.3s ease;
+    position: relative;
+    margin: 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 8px;
+}
+    /* Optional subtle separator */
+    .navbar-custom .dropdown-item:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        right: 20px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.08), transparent);
+    }
+
+/* Mobile dropdown - always visible when open */
+@media (max-width: 991.98px) {
+    .navbar-custom .dropdown-menu {
+        position: static !important;
+        transform: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        box-shadow: none;
+        background: rgba(255, 255, 255, 0.2)!important;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 12px;
+        margin: 8px 0;
+        padding: 8px 0;
+    }
+
+    .navbar-custom .dropdown-item {
+        margin: 0 4px;
+        padding: 10px 16px;
+        font-size: 0.95rem;
+        transform: none !important;
+    }
+
+        .navbar-custom .dropdown-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: var(--accent);
+        }
+}
+
+/* Entrance animation */
+@keyframes dropdownSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-12px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Accent fallback if not defined */
+:root {
+    --accent-rgb: 0, 123, 255; /* adjust to match your theme */
+}
+
 
 /* Mobile navbar adjustments */
 @media (max-width: 991.98px) {
