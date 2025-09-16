@@ -6,7 +6,6 @@
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
-    /* Background pattern for subtle texture */
     .partners-section::before {
         content: '';
         position: absolute;
@@ -27,32 +26,35 @@
     z-index: 1;
 }
 
-/* Brands Container Enhancement */
-.brands-container {
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-/*    border-radius: 24px;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(25px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);*/
-    padding: 15px 15px;
-}
-
-/* Header Section */
 .partners-header {
     text-align: center;
     margin-bottom: 60px;
 }
 
+.whychooseus-section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    color: #333;
+}
+
+.highlight-text {
+    color: #007bff;
+}
 
 .partners-subtitle {
     font-size: 1.1rem;
     color: #6c757d;
     margin: 0;
     font-weight: 400;
+}
+
+.brands-container {
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 15px 15px;
 }
 
 /* Carousel Wrapper */
@@ -63,45 +65,118 @@
     gap: 20px;
 }
 
-/* Carousel Container - FIXED */
+.carousel-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    z-index: 10;
+}
+
+    .carousel-btn:hover {
+        background: #0056b3;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0, 123, 255, 0.4);
+    }
+
+/* Brands Carousel Container */
 .brands-carousel {
     flex: 1;
     overflow: hidden;
     border-radius: 16px;
-    height: 320px;
+    height: 280px;
     position: relative;
 }
 
-/* Brands Grid - FIXED */
-.brands-grid {
+/* Main Brands Grid */
+#brandsGrid {
     display: flex;
-    transition: transform 0.5s ease;
-    height: 100%;
-}
-
-/* FIXED: Carousel Page Styling */
-.carousel-page {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    flex-direction: column;
     gap: 20px;
+    overflow: hidden;
     width: 100%;
-    flex-shrink: 0;
-    min-width: 100%;
     height: 100%;
-    padding: 15px;
-    box-sizing: border-box;
+    position: relative;
 }
 
+/* Brand Rows */
+.brand-row {
+    display: flex;
+    gap: 20px;
+    height: 120px;
+    position: relative;
+    will-change: transform;
+}
+
+.brand-row-inner {
+    display: flex;
+    gap: 20px;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* Top row moves left */
+.top-row .brand-row-inner {
+    animation-name: scrollLeft;
+    animation-duration: 30s;
+}
+
+/* Bottom row moves right */
+.bottom-row .brand-row-inner {
+    animation-name: scrollRight;
+    animation-duration: 30s;
+}
+
+/* Keyframe animations */
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scrollRight {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Brand Items */
 .brand-item {
+    flex: 0 0 180px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    padding: 15px;
+    border: 2px solid transparent;
 }
 
     .brand-item:hover {
-        transform: translateY(-5px);
+        transform: translateY(-8px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        border-color: #007bff;
     }
 
 .brand-logo {
@@ -110,188 +185,86 @@
     display: flex;
     align-items: center;
     justify-content: center;
-/*    background: rgba(255, 255, 255, 0.9);*/
-/*    border-radius: 16px;*/
-    padding: 15px;
-/*    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);*/
-    transition: all 0.4s ease;
-    backdrop-filter: blur(15px);
-/*    border: 2px solid rgba(255, 255, 255, 0.2);*/
-    position: relative;
-    overflow: hidden;
-    box-sizing: border-box;
-    max-height:7.5rem;
 }
 
-    .brand-logo::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-/*        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);*/
-        transition: left 0.5s ease;
+    .brand-logo img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        transition: transform 0.3s ease;
     }
-
-.brand-item:hover .brand-logo::before {
-    left: 100%;
-}
-
-.brand-logo:hover {
-    transform: scale(1.05) translateY(-8px);
-/*    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
-    background: rgba(255, 255, 255, 0.95);*/
-/*    border: 2px solid rgba(102, 126, 234, 0.3);*/
-}
-
-.brand-logo img {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    transition: filter 0.3s ease;
-}
 
 .brand-item:hover .brand-logo img {
-    filter: brightness(1.1);
+    transform: scale(1.05);
 }
 
-/* Carousel Navigation Buttons */
-.carousel-btn {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    border: none;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(15px);
-    color: #2c3e50;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    z-index: 3;
-    border: 2px solid rgba(102, 126, 234, 0.1);
+.demo-brand {
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    font-size: 14px;
 }
-
-    .carousel-btn:hover {
-        background: rgba(255, 255, 255, 0.5);
-        color: white;
-        transform: scale(1.15);
-        box-shadow: 0 12px 30px rgba(102, 126, 234, 0.3);
-    }
-
-    .carousel-btn:disabled {
-        cursor: not-allowed;
-        opacity: 0.5;
-    }
-
-        .carousel-btn:disabled:hover {
-            transform: none;
-            background: rgba(255, 255, 255, 0.9);
-            color: #2c3e50;
-        }
 
 /* Carousel Dots */
 .carousel-dots {
     display: flex;
     justify-content: center;
-    gap: 12px;
-    margin-top:1rem;
+    gap: 8px;
+    margin-top: 20px;
 }
 
 .carousel-dot {
-    width: 14px;
-    height: 14px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     border: none;
-    background: rgba(108, 117, 125, 0.3);
+    background: #ddd;
     cursor: pointer;
-    transition: all 0.4s ease;
-    position: relative;
+    transition: all 0.3s ease;
 }
 
-    .carousel-dot::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 0;
-        height: 0;
-        background: linear-gradient(135deg, var(--primary), var(--accent));
-        border-radius: 50%;
-        transition: all 0.4s ease;
-    }
-
-    .carousel-dot.active::after {
-        width: 100%;
-        height: 100%;
-    }
-
-    .carousel-dot:hover {
-        background: linear-gradient(135deg, var(--primary), var(--accent));
+    .carousel-dot.active {
+        background: #007bff;
         transform: scale(1.2);
     }
 
-    .carousel-dot.active:hover {
-        background: linear-gradient(135deg, var(--primary), var(--accent));
+    .carousel-dot:hover {
+        background: #0056b3;
     }
 
-/* Demo brand placeholders */
-.demo-brand {
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 14px;
-    text-align: center;
-    min-height: 60px;
+/* Pause animation on hover */
+.carousel-wrapper:hover .brand-row-inner {
+    animation-play-state: paused;
+}
+
+/* Speed control classes */
+.speed-slow .brand-row-inner {
+    animation-duration: 45s !important;
+}
+
+.speed-fast .brand-row-inner {
+    animation-duration: 20s !important;
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-    .brand-logo {
-        max-width: 160px;
-        max-height: 100px;
-        padding: 15px;
+@media (max-width: 768px) {
+    .brand-item {
+        flex: 0 0 150px;
+        height: 100px;
+        padding: 10px;
     }
 
-    .carousel-page {
+    .brand-row {
         gap: 15px;
-        padding: 15px;
+        height: 100px;
+    }
+
+    .brand-row-inner {
+        gap: 15px;
     }
 
     .brands-carousel {
-        height: 250px;
-    }
-}
-
-/* Tablet and Mobile: 3x2 grid */
-@media (max-width: 768px) {
-    .partners-section {
-        padding: 60px 0;
-    }
-
-    .carousel-page {
-        width: 100%;
-        min-width: 100%;
-        grid-template-columns: repeat(2, 1fr); /* 3 columns */
-        grid-template-rows: repeat(4, 1fr); /* 2 rows */
-        gap: 10px;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-
-    .brand-logo {
-        max-width: 140px;
-        max-height: 90px;
-        padding: 12px;
+        height: 240px;
     }
 
     .carousel-btn {
@@ -299,45 +272,29 @@
         height: 45px;
     }
 
-    .carousel-wrapper {
-        gap: 15px;
-    }
-
-    .brands-container {
-        padding: 25px 15px;
-    }
-
-    .brands-carousel {
-        height: 400px;
-        overflow: hidden;
-    }
-    .brand-item {
-        width: 100%; /* Make sure items shrink to fit the grid */
+    .partners-section {
+        padding: 60px 0;
     }
 }
 
 @media (max-width: 480px) {
-    .partners-header {
-        margin-bottom: 40px;
-    }
-
-    .partners-subtitle {
-        font-size: 1rem;
-    }
-
-    .carousel-page {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        gap: 8px;
+    .brand-item {
+        flex: 0 0 120px;
+        height: 80px;
         padding: 8px;
     }
-    .brand-item {
-        width: 100%;
+
+    .brand-row {
+        gap: 10px;
+        height: 80px;
     }
-    .brand-logo {
-        max-width: 120px;
-        max-height: 80px;
-        padding: 10px;
+
+    .brand-row-inner {
+        gap: 10px;
+    }
+
+    .brands-carousel {
+        height: 200px;
     }
 
     .carousel-btn {
@@ -349,37 +306,7 @@
         gap: 12px;
     }
 
-    .brands-container {
-        padding: 20px 12px;
-    }
-
-    .brands-carousel {
-        height: 360px;
+    .whychooseus-section-title {
+        font-size: 2rem;
     }
 }
-
-
-/* Animation for smooth transitions */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.brand-item {
-    animation: fadeIn 0.6s ease forwards;
-}
-
-    .brand-item:nth-child(odd) {
-        animation-delay: 0.1s;
-    }
-
-    .brand-item:nth-child(even) {
-        animation-delay: 0.2s;
-    }
